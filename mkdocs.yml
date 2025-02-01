@@ -1,0 +1,58 @@
+site_name: quantum-computing
+site_description: 'DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_author: 'Sharat B'
+repo_name: 'GitHub Repo'
+site_url: 'https://ak95am98.github.io/quantum-computing/'
+repo_url: 'https://github.com/ak95am98/quantum-computing'
+edit_uri: 'blob/master/docs'
+
+nav:
+  - Home: index.md
+  - Prompts:
+    - Introduction: prompts/index.md
+    - Course Description: prompts/01-course-description.md
+    - Enumeration: prompts/02-enumeration.md
+  - References: references.md
+  - Contact: contact.md
+ 
+# Dan's MicroSite Standards from here down
+
+theme:
+  name: material
+  logo: img/logo.png
+  favicon: img/favicon.ico
+  primary: custom
+  accent: 'gold'
+  include_sidebar: true
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    # this adds the prev and next icons in the footer
+    - navigation.footer
+    - content.action.edit
+plugins:
+  - search
+#  - social
+markdown_extensions:
+  - admonition
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.highlight:
+      linenums: true
+extra_css:
+   - css/extra.css
+extra_javascript:
+    - js/extra.js
+#extra:
+#  analytics:
+#    provider: google
+    # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
+#    property: G-XXXX
+
