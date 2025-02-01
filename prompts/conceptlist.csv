@@ -1,0 +1,153 @@
+ConceptID, ConceptLabel, Dependencies
+1,Electrical charge  
+2,Current (I)  
+3,Voltage (V)  
+4,Power (P)  
+5,Energy (W)  
+6,Resistance (R)  
+7,Ohm’s Law,2|3|6 
+8,Conductance (G)  
+9,Kirchhoff’s Current Law (KCL),2  
+10,Kirchhoff’s Voltage Law (KVL),3 
+11,Node analysis  
+12,Loop analysis  
+13,Series resistors  
+14,Parallel resistors  
+15,Voltage division  
+16,Current division  
+17,Superposition theorem  
+18,Thevenin’s theorem,20 
+19,Norton’s theorem,19 
+20,Source transformation  
+21,Mesh current method  
+22,Nodal voltage method  
+23,Dependent sources  
+24,Power dissipation in resistors  
+25,Maximum power transfer theorem  
+26,Delta-Wye (Δ-Y) transformation  
+27,Capacitance (C)  
+28,Inductance (L)  
+29,Reactance (X)  
+30,Impedance (Z)  
+31,Admittance (Y)  
+32,Capacitors in series  
+33,Capacitors in parallel  
+34,Inductors in series  
+35,Inductors in parallel  
+36,Transient response of RC circuits  
+37,Transient response of RL circuits  
+38,Time constant (τ)  
+39,Step response of RC circuits  
+40,Step response of RL circuits  
+41,Natural response of RC circuits  
+42,Natural response of RL circuits  
+43,First-order circuits  
+44,Second-order circuits  
+45,RLC circuits  
+46,Resonance in RLC circuits  
+47,Quality factor (Q)  
+48,Bandwidth (BW)  
+49,Damping factor (ζ)  
+50,Complex numbers  
+51,Euler’s formula  
+52,Phasors  
+53,Sinusoidal steady-state analysis  
+54,Impedance in AC circuits  
+55,Admittance in AC circuits  
+56,Ohm’s Law for AC circuits  
+57,Power in AC circuits  
+58,Real power (P)  
+59,Reactive power (Q)  
+60,Apparent power (S)  
+61,Power factor (PF)  
+62,Power factor correction  
+63,RMS (Root Mean Square) values  
+64,Instantaneous power  
+65,Average power  
+66,Complex power  
+67,Fourier series  
+68,Fourier transform  
+69,Frequency response  
+70,Bode plots  
+71,Poles and zeros  
+72,Transfer functions  
+73,Low-pass filters (LPF)  
+74,High-pass filters (HPF)  
+75,Band-pass filters (BPF)  
+76,Band-stop filters (BSF)  
+77,Active filters  
+78,Passive filters  
+79,Butterworth filters  
+80,Chebyshev filters  
+81,Operational amplifiers (Op-Amps)  
+82,Ideal Op-Amp assumptions  
+83,Inverting Op-Amp  
+84,Non-inverting Op-Amp  
+85,Voltage follower (buffer)  
+86,Summing amplifier  
+87,Difference amplifier  
+88,Integrator circuit  
+89,Differentiator circuit  
+90,Instrumentation amplifier  
+91,Comparator circuits  
+92,Clipping circuits  
+93,Clamping circuits  
+94,Rectifiers (half-wave and full-wave)  
+95,Voltage regulators  
+96,Zener diodes  
+97,Bipolar Junction Transistor (BJT) basics  
+98,BJT as a switch  
+99,BJT as an amplifier  
+100,Common emitter configuration  
+101,Common collector configuration  
+102,Common base configuration  
+103,Field Effect Transistor (FET) basics  
+104,MOSFET operation  
+105,MOSFET as a switch  
+106,MOSFET as an amplifier  
+107,Small-signal analysis  
+108,Large-signal analysis  
+109,Amplifier gain (voltage, current, and power)  
+110,Input and output impedance  
+111,Feedback in circuits  
+112,Negative feedback  
+113,Positive feedback  
+114,Oscillators  
+115,Wien bridge oscillator  
+116,Colpitts oscillator  
+117,Hartley oscillator  
+118,Schmitt triggers  
+119,Pulse circuits  
+120,Digital logic levels  
+121,Boolean algebra  
+122,Logic gates (AND, OR, NOT, XOR, etc.)  
+123,Combinational logic circuits  
+124,Sequential logic circuits  
+125,Flip-flops (SR, D, JK, T)  
+126,Counters  
+127,Shift registers  
+128,Memory elements (SRAM, DRAM)  
+129,Analog-to-Digital Converters (ADC)  
+130,Digital-to-Analog Converters (DAC)  
+131,PWM (Pulse Width Modulation)  
+132,Power electronics basics  
+133,Switching regulators (Buck, Boost, Buck-Boost)  
+134,Linear regulators  
+135,Transformers  
+136,Mutual inductance  
+137,Coupled circuits  
+138,Audio amplifiers  
+139,Distortion and intermodulation  
+140,Differential amplifiers  
+141,Common-mode rejection ratio (CMRR)  
+142,Noise in circuits  
+143,Thermal noise  
+144,Shot noise  
+145,Electromagnetic interference (EMI)  
+146,Signal integrity  
+147,Transmission lines  
+148,Wave propagation in circuits  
+149,Smith charts  
+150,PCB design considerations  
+
+This list follows a logical progression from basic electrical principles to advanced circuit concepts used in signal processing and audio applications,Let me know if you'd like modifications!
