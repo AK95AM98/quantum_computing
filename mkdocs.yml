@@ -10,8 +10,9 @@ nav:
   - Home: index.md
   - Chapters:
      - chapters\index.md
-     - chapters\chapter1.md
+     - Intro: chapters\chapter1.md
      - chapters\chapter2.md
+     - chapters\chapter4.md
   - Prompts:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
@@ -50,10 +51,13 @@ markdown_extensions:
   - attr_list
   - pymdownx.highlight:
       linenums: true
+  - pymdownx.arithmatex:
+      generic: true
 extra_css:
    - css/extra.css
 extra_javascript:
     - js/extra.js
+    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 #extra:
 #  analytics:
 #    provider: google
