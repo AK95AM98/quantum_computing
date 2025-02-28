@@ -8,6 +8,10 @@ edit_uri: 'blob/master/docs'
 
 nav:
   - Home: index.md
+  - Chapters:
+     - chapters\index.md
+     - chapters\chapter1.md
+     - chapters\chapter2.md
   - Prompts:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
