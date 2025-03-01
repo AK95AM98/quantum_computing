@@ -506,6 +506,46 @@
 
 
 <h1 id="chapter-2-basis-of-quantum">Chapter 2: Basis of quantum</h1>
+<p>\documentclass{article}
+\usepackage{amsmath, amssymb, braket}</p>
+<p>\title{Introduction to Quantum Computing and Physical Basics of Computing}
+\author{}
+\date{}</p>
+<p>\begin{document}</p>
+<p>\maketitle</p>
+<p>\section*{Class Lecture: Fundamental Quantum Computing Concepts}</p>
+<p>Good morning, everyone! Today we're going to explore some fundamental concepts in quantum computing that help us understand how quantum systems differ from classical systems and the unique properties of quantum operations.</p>
+<p>\section{Information Scaling in Classical vs. Quantum Computing}</p>
+<p>\textbf{Question:} How does the information content of a computing system scale under classical vs. quantum computing with each extra (q)bit added to the system? How does the picture change after measurement?</p>
+<p>In \textbf{classical computing}, we work with bits that can be either 0 or 1. When we add bits to a classical system, the number of possible configurations scales as <span class="arithmatex">\(2^n\)</span>, where <span class="arithmatex">\(n\)</span> is the number of bits. Each additional bit doubles the number of possible states the system can represent.</p>
+<p>For example:
+\begin{itemize}
+    \item 1 bit: 2 possible states (0 or 1)
+    \item 2 bits: 4 possible states (00, 01, 10, 11)
+    \item 3 bits: 8 possible states
+\end{itemize}</p>
+<p>However, in \textbf{quantum computing}, qubits can exist in superposition states, meaning an <span class="arithmatex">\(n\)</span>-qubit system can represent <span class="arithmatex">\(2^n\)</span> states simultaneously. This property creates exponential scaling potential.</p>
+<p>Upon \textbf{measurement}, the superposition collapses to a single classical outcome, meaning we retrieve only one of the possible configurations, reducing the quantum advantage to a classical state.</p>
+<p>\section{Quantum Gates and the Bloch Sphere}</p>
+<p>\textbf{Question:} Each quantum gate transforms the input state (i.e., the point on the Bloch sphere) to the output state. Each point on the surface of the sphere can represent the outcome of a transformation, thus an infinite number of quantum gates exist. Does this hold for all quantum gates, for an arbitrary number of qubits?</p>
+<p>For \textbf{single-qubit systems}, the Bloch sphere provides a complete visualization. Any pure quantum state can be represented as a point on the sphere. Single-qubit quantum gates correspond to rotations or transformations on this sphere. Since these transformations are continuous (described by unitary matrices), there are infinitely many possible single-qubit quantum gates.</p>
+<p>For \textbf{multi-qubit systems}, the Bloch sphere representation no longer suffices. A two-qubit system requires a 4-dimensional complex vector space, making it impossible to represent on a simple sphere. Instead, quantum gates operate within this higher-dimensional space using unitary transformations such as the CNOT gate, which entangles qubits and cannot be represented solely on the Bloch sphere.</p>
+<p>\section{Measurement Gates and Unitarity}</p>
+<p>\textbf{Question:} Does the measurement gate represent a unitary operation?</p>
+<p>The answer is \textbf{no}. Measurement is not a unitary operation because:
+\begin{enumerate}
+    \item Unitary operations preserve probability (<span class="arithmatex">\(U^{\dagger}U = I\)</span>).
+    \item Unitary operations are reversible, meaning we can determine the input state from the output state.
+\end{enumerate}</p>
+<p>Measurement collapses a quantum state into one of the basis states, irreversibly reducing the quantum superposition into a classical outcome. For example, measuring a qubit in the state <span class="arithmatex">\(\ket{\Psi} = \alpha \ket{0} + \beta \ket{1}\)</span> yields:
+\begin{itemize}
+    \item <span class="arithmatex">\(\ket{0}\)</span> with probability <span class="arithmatex">\(|\alpha|^2\)</span>
+    \item <span class="arithmatex">\(\ket{1}\)</span> with probability <span class="arithmatex">\(|\beta|^2\)</span>
+\end{itemize}</p>
+<p>Since measurement fundamentally changes the system and does not allow for state recovery, it is a non-unitary operation.</p>
+<p>\vspace{0.5cm}
+Any questions before we move on to our next topic? These concepts form the foundation of how we think about quantum information processing and the differences between quantum and classical computing paradigms.</p>
+<p>\end{document}</p>
 
 
 
