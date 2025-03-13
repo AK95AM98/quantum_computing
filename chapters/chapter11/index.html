@@ -552,15 +552,70 @@
 
 
 <h1 id="chapter-11-latex">Chapter 11: Latex</h1>
-<p>\documentclass{article}
-\usepackage{amsmath}
-\begin{document}
-\section{Introduction}
-This is a simple document with LaTeX rendering.
-[
+<p>This is a simple document with LaTeX rendering.
+$$
 E = mc^2
-]
-\end{document}</p>
+$$
+\section{Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator}</p>
+<p>\section*{Lecture 11: Quantum Gates and Operators}</p>
+<p>\subsection*{Pauli-X Gate}
+The Pauli-X gate can be represented in terms of the Hadamard (<span class="arithmatex">\(H\)</span>) and Pauli-Z (<span class="arithmatex">\(Z\)</span>) gates as:</p>
+<div class="arithmatex">\[\begin{equation}
+    X = H Z H
+\end{equation}\]</div>
+<p>Matrix representation of the Pauli-X gate:</p>
+<div class="arithmatex">\[\begin{equation}
+    X = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
+\end{equation}\]</div>
+<p>\subsection*{Hadamard Gate}
+The Hadamard gate transforms the basis states as follows:</p>
+<div class="arithmatex">\[\begin{equation}
+    H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \quad
+    H|1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
+\end{equation}\]</div>
+<p>Matrix representation:</p>
+<div class="arithmatex">\[\begin{equation}
+H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; -1 \end{bmatrix}
+\end{equation}\]</div>
+<p>\subsection*{Bloch Sphere Representation}
+A qubit state can be visualized on the Bloch Sphere and is given by:</p>
+<div class="arithmatex">\[\begin{equation}
+    |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi} \sin\frac{\theta}{2}|1\rangle
+\end{equation}\]</div>
+<p>where:
+\begin{itemize}
+    \item <span class="arithmatex">\( \theta \)</span> represents the polar angle, determining the probability distribution between <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>.
+    \item <span class="arithmatex">\( \phi \)</span> represents the phase difference between <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>.
+\end{itemize}</p>
+<p>\subsection*{Eigenstates and Operators}</p>
+<p>\textbf{Pauli-Z Operator:}</p>
+<div class="arithmatex">\[\begin{equation}
+    Z|0\rangle = +|0\rangle, \quad Z|1\rangle = -|1\rangle
+\end{equation}\]</div>
+<p>Matrix representation:</p>
+<div class="arithmatex">\[\begin{equation}
+    Z = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+\end{equation}\]</div>
+<p>\subsection*{Projection Operators}
+Projection operators for measuring in the computational basis:</p>
+<div class="arithmatex">\[\begin{equation}
+    \mathbf{P}_0 = |0\rangle\langle0| = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}, \quad
+    \mathbf{P}_1 = |1\rangle\langle1| = \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\end{equation}\]</div>
+<p>Measurement probabilities for a general qubit state <span class="arithmatex">\( \psi = \alpha|0\rangle + \beta|1\rangle \)</span>:</p>
+<div class="arithmatex">\[\begin{equation}
+    P(|0\rangle) = |\alpha|^2, \quad P(|1\rangle) = |\beta|^2
+\end{equation}\]</div>
+<p>\subsection*{CNOT Gate (Controlled-NOT)}
+Matrix representation of the Controlled-NOT (CNOT) gate:</p>
+<div class="arithmatex">\[\begin{equation}
+    \text{CNOT} = \begin{bmatrix} 
+        1 &amp; 0 &amp; 0 &amp; 0 \\ 
+        0 &amp; 1 &amp; 0 &amp; 0 \\ 
+        0 &amp; 0 &amp; 0 &amp; 1 \\ 
+        0 &amp; 0 &amp; 1 &amp; 0 
+    \end{bmatrix}
+\end{equation}\]</div>
 
 
 

@@ -552,111 +552,87 @@
 
 
 <h1 id="chapter-3-quantum-states">Chapter 3: Quantum States</h1>
-<p>\documentclass[12pt]{article}
-\usepackage[a4paper,margin=1in]{geometry}
-\usepackage{titlesec}
-\usepackage{amsmath,amssymb}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    pdfauthor={Quantum Computing Lecture Summaries},
-    pdftitle={Quantum Computing - Expanded Lecture Summaries}
-}</p>
-<p>% Custom section formatting
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}</p>
+<p>Lecture 3
+\documentclass{article}
+\usepackage{amsmath}</p>
 <p>\begin{document}</p>
-<p>% Lecture 3
-\section{Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator}</p>
-<p>\begin{itemize}
-\item \textbf{Additional Key Identities:}</p>
-<p>\item \textbf{Pauli-X Gate Identity:}
-  [
-  X = HZH
-  ]
-  - The Pauli-X (NOT) gate can be expressed as a combination of Hadamard (<span class="arithmatex">\(H\)</span>) and Pauli-Z (<span class="arithmatex">\(Z\)</span>) gates. 
-  - Matrix representation of the Pauli-X gate:
-  [
-  X = \begin{bmatrix} 
-    0 &amp; 1 \
-    1 &amp; 0 
-  \end{bmatrix}
-  ]</p>
-<p>\item \textbf{Hadamard Transform:}
-  [
-  H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \quad H|1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
-  ]
-  - The Hadamard gate creates superposition states, an essential aspect of quantum computation. 
-  - Matrix representation:
-  [
-  H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 &amp; 1 \
-  1 &amp; -1 \end{bmatrix}
-  ]</p>
-<p>\end{itemize}</p>
-<p>\section*{Expanded Key Concepts}</p>
-<p>\begin{itemize}
-\item \textbf{Bloch Sphere Representation:}
-  - A qubit's state <span class="arithmatex">\( |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle \)</span> is visualized on the Bloch Sphere:
-    - <span class="arithmatex">\( \theta \)</span>: Angle between the state vector and the Z-axis.
-    - <span class="arithmatex">\( \phi \)</span>: Phase angle in the XY-plane.
-  - Key Points:
-    - <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span> lie on the Z-axis.
-    - Superpositions are points on the surface.</p>
-<p>\item \textbf{Eigenstates and Eigenvectors:}
-  - Example: For the Pauli-Z operator (<span class="arithmatex">\( Z \)</span>):
-    [
-    Z|0\rangle = +|0\rangle \quad (\text{eigenvalue } +1)
-    ]
-    [
-    Z|1\rangle = -|1\rangle \quad (\text{eigenvalue } -1)
-    ]
-  - Measurement outcomes align with these eigenstates.
-  - Matrix representation:
-  [
-  Z = \begin{bmatrix} 1 &amp; 0 \
-  0 &amp; -1 \end{bmatrix}
-  ]</p>
-<p>\item \textbf{Projection Operator:}
-  - Projects a state onto a specific eigenstate:
-  [
-  P_0 = |0\rangle\langle0|, \quad P_1 = |1\rangle\langle1|
-  ]
-  - If <span class="arithmatex">\( |\psi\rangle = a|0\rangle + b|1\rangle \)</span>, projection onto <span class="arithmatex">\( |0\rangle \)</span> yields:
-  [
-  P_0|\psi\rangle = a|0\rangle
-  ]
-  - Matrix representations:
-  [
-  P_0 = \begin{bmatrix} 1 &amp; 0 \
-  0 &amp; 0 \end{bmatrix}, \quad P_1 = \begin{bmatrix} 0 &amp; 0 \
-  0 &amp; 1 \end{bmatrix}
-  ]</p>
-<p>\item \textbf{Two-Qubit States and Matrices:}
-  - A general two-qubit state:
-  [
-  |\psi\rangle = c_{00}|00\rangle + c_{01}|01\rangle + c_{10}|10\rangle + c_{11}|11\rangle
-  ]
-  - Coefficients <span class="arithmatex">\( c_{ij} \)</span> are complex amplitudes satisfying normalization: <span class="arithmatex">\( \sum |c_{ij}|^2 = 1 \)</span>.
-  - Matrix representation of a two-qubit system <span class="arithmatex">\( |\psi\rangle \)</span>:
-  [
-  |\psi\rangle = \begin{bmatrix} c_{00} \
-  c_{01} \
-  c_{10} \
-  c_{11} \end{bmatrix}
-  ]
-  - Example: Controlled-NOT (CNOT) gate matrix:
-  [
-  \text{CNOT} = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \
-  0 &amp; 1 &amp; 0 &amp; 0 \
-  0 &amp; 0 &amp; 0 &amp; 1 \
-  0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
-  ]</p>
-<p>\end{itemize}</p>
-<p>\vspace{1cm}
-\noindent \textbf{Note:} This document summarizes key concepts and examples from lectures on Quantum Computing. For more details and practical demonstrations, refer to accompanying resources or the Qiskit documentation.</p>
-<p>\end{document}</p>
+<p>\section{Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, and Gates}</p>
+<p>\subsection*{Additional Key Identities}</p>
+<p>\textbf{Pauli-X Gate Identity:}<br />
+The Pauli-X (NOT) gate can be expressed as a combination of Hadamard (<span class="arithmatex">\( H \)</span>) and Pauli-Z (<span class="arithmatex">\( Z \)</span>) gates:</p>
+<p>$
+X = H Z H
+$</p>
+<p>Matrix representation of the Pauli-X gate:</p>
+<p>$
+X = \begin{bmatrix} 
+0 &amp; 1 \ 
+1 &amp; 0 
+\end{bmatrix}
+$</p>
+<p>\subsection*{Hadamard Gate}</p>
+<p>The Hadamard gate creates superposition states:</p>
+<p>$
+H |0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \quad
+H |1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
+$</p>
+<p>Matrix representation:</p>
+<p>$
+H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 &amp; 1 \ 1 &amp; -1 \end{bmatrix}
+$</p>
+<p>\subsection*{Bloch Sphere Representation}</p>
+<p>A qubit state can be visualized on the Bloch Sphere as:</p>
+<p>$
+|\psi\rangle = \cos\frac{\theta}{2} |0\rangle + e^{i\phi} \sin\frac{\theta}{2} |1\rangle
+$</p>
+<p>where:
+\begin{itemize}
+    \item <span class="arithmatex">\( \theta \)</span> determines the relative contribution of <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>.
+    \item <span class="arithmatex">\( \phi \)</span> represents the phase difference between <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>.
+\end{itemize}</p>
+<p>\subsection*{Eigenstates and Eigenvectors of Pauli-Z Gate}</p>
+<p>\textbf{Pauli-Z Operator (<span class="arithmatex">\( Z \)</span>) Eigenstates:}</p>
+<p>$
+Z |0\rangle = +|0\rangle, \quad Z|1\rangle = -|1\rangle
+$</p>
+<p>Matrix representation:</p>
+<p>$
+Z = \begin{bmatrix} 1 &amp; 0 \ 0 &amp; -1 \end{bmatrix}
+$</p>
+<p>\subsection*{Eigenstates and Eigenvectors of Pauli-X Gate}</p>
+<p>\textbf{Pauli-X Operator (<span class="arithmatex">\( X \)</span>) Eigenstates:}</p>
+<div class="arithmatex">\[\begin{equation}
+    X |\pm\rangle = \pm |\pm\rangle
+\end{equation}\]</div>
+<p>where the eigenstates are:</p>
+<p>$
+|+\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ 1 \end{bmatrix}, \quad
+|-\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ -1 \end{bmatrix}
+$</p>
+<p>\subsection*{Projection Operators}</p>
+<p>A projection operator projects a state onto a specific eigenstate:</p>
+<p>For example, if we consider a system with eigenstates <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>, the projection operators are:</p>
+<p>$
+P_0 = |0\rangle \langle 0| = \begin{bmatrix} 1 &amp; 0 \ 0 &amp; 0 \end{bmatrix}, \quad
+P_1 = \begin{bmatrix} 0 &amp; 0 \ 0 &amp; 1 \end{bmatrix}
+$</p>
+<p>The probability of measuring <span class="arithmatex">\( |0\rangle \)</span> or <span class="arithmatex">\( |1\rangle \)</span>:</p>
+<p>$
+P(|0\rangle) = |\langle 0 | \psi \rangle |^2, \quad P(|1\rangle) = |\langle 1 | \psi \rangle |^2
+$</p>
+<p>\subsection*{Two-Qubit Systems and CNOT Gate}</p>
+<p>A general two-qubit state can be written as:</p>
+<p>$
+|\psi\rangle = c_{00}|00\rangle + c_{01}|01\rangle + c_{10}|10\rangle + c_{11}|11\rangle
+$</p>
+<p>where the coefficients satisfy:</p>
+<p>$
+|c_{00}|^2 + |c_{01}|^2 + |c_{10}|^2 + |c_{11}|^2 = 1
+$</p>
+<p>Matrix representation of the Controlled-NOT (CNOT) gate:</p>
+<p>$
+CNOT = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \ 0 &amp; 1 &amp; 0 &amp; 0 \ 0 &amp; 0 &amp; 0 &amp; 1 \ 0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
+$</p>
 
 
 
