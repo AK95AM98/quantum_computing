@@ -603,131 +603,143 @@
 <p>\begin{document}</p>
 <p>% Lecture 3
 \section<em Concepts:="Concepts:" Key="Key">{Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator}
-\subsection</em>
+\subsection</em></p>
+<p>\begin{itemize}
     \item \textbf{Additional Key Identities:}</p>
-<ol>
-<li>\item \textbf{Pauli-X Gate Identity:}
-   [
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>\item \textbf{Pauli-X Gate Identity:}
+</code></pre></div></td></tr></table></div>
+<p>[
    X = HZH
-   ]</li>
-<li>The Pauli-X (NOT) gate can be expressed as a combination of Hadamard (<span class="arithmatex">\( H \)</span>) and Pauli-Z (<span class="arithmatex">\( Z \)</span>) gates.</li>
-<li>
-<p>Matrix representation of the Pauli-X gate:
+   ]
+   - The Pauli-X (NOT) gate can be expressed as a combination of Hadamard (<span class="arithmatex">\( H \)</span>) and Pauli-Z (<span class="arithmatex">\( Z \)</span>) gates.
+   - Matrix representation of the Pauli-X gate:
      [
      X = \begin{bmatrix} 0 &amp; 1 \
      1 &amp; 0 \end{bmatrix}
      ]</p>
-</li>
-<li>
-<p>\item \textbf{Hadamard Transform:}
-   [
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>\item \textbf{Hadamard Transform:}
+</code></pre></div></td></tr></table></div>
+<p>[
    H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \quad H|1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
-   ]</p>
-</li>
-<li>The Hadamard gate creates superposition states, an essential aspect of quantum computation.</li>
-<li>Matrix representation:
+   ]
+   - The Hadamard gate creates superposition states, an essential aspect of quantum computation.
+   - Matrix representation:
      [
      H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 &amp; 1 \
      1 &amp; -1 \end{bmatrix}
-     ]</li>
-</ol>
+     ]
+\end{itemize}</p>
 <h4 id="expanded-key-concepts">Expanded Key Concepts:</h4>
-<ol>
-<li><strong>Bloch Sphere Representation:</strong></li>
-<li>A qubit's state <span class="arithmatex">\( |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle \)</span> is visualized on the Bloch Sphere:<ul>
-<li><span class="arithmatex">\( \theta \)</span>: Angle between the state vector and the Z-axis.</li>
-<li><span class="arithmatex">\( \phi \)</span>: Phase angle in the XY-plane.</li>
-</ul>
-</li>
-<li>
-<p>Key Points:</p>
-<ul>
-<li><span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span> lie on the Z-axis.</li>
-<li>Superpositions are points on the surface.</li>
-</ul>
-</li>
-<li>
-<p><strong>Eigenstates and Eigenvectors:</strong></p>
-</li>
-<li>Example: For the Pauli-Z operator (<span class="arithmatex">\( Z \)</span>):<ul>
-<li><span class="arithmatex">\( Z|0\rangle = +|0\rangle \)</span> (eigenvalue <span class="arithmatex">\( +1 \)</span>).</li>
-<li><span class="arithmatex">\( Z|1\rangle = -|1\rangle \)</span> (eigenvalue <span class="arithmatex">\( -1 \)</span>).</li>
-</ul>
-</li>
-<li>Measurement outcomes align with these eigenstates.</li>
-<li>
-<p>Matrix representation:
-     [
-     Z = \begin{bmatrix} 1 &amp; 0 \
-     0 &amp; -1 \end{bmatrix}
-     ]</p>
-</li>
-<li>
-<p><strong>Projection Operator:</strong></p>
-</li>
-<li>Projects a state onto a specific eigenstate:
-     [
-     P_0 = |0\rangle\langle0|, \quad P_1 = |1\rangle\langle1|
-     ]</li>
-<li>If <span class="arithmatex">\( |\psi\rangle = a|0\rangle + b|1\rangle \)</span>, projection onto <span class="arithmatex">\( |0\rangle \)</span> yields:
-     [
-     P_0|\psi\rangle = a|0\rangle
-     ]</li>
-<li>
-<p>Matrix representations:
-     [
-     P_0 = \begin{bmatrix} 1 &amp; 0 \
-     0 &amp; 0 \end{bmatrix}, \quad P_1 = \begin{bmatrix} 0 &amp; 0 \
-     0 &amp; 1 \end{bmatrix}
-     ]</p>
-</li>
-<li>
-<p><strong>Two-Qubit States and Matrices:</strong></p>
-</li>
-<li>A general two-qubit state:
-     [
-     |\psi\rangle = c_{00}|00\rangle + c_{01}|01\rangle + c_{10}|10\rangle + c_{11}|11\rangle
-     ]<ul>
-<li>Coefficients <span class="arithmatex">\( c_{ij} \)</span> are complex amplitudes satisfying normalization: <span class="arithmatex">\( \sum |c_{ij}|^2 = 1 \)</span>.</li>
-</ul>
-</li>
-<li>Matrix representation of a two-qubit system <span class="arithmatex">\( |\psi\rangle \)</span>:
-     [
-     |\psi\rangle = \begin{bmatrix} c_{00} \
-     c_{01} \
-     c_{10} \
-     c_{11} \end{bmatrix}
-     ]</li>
-<li>
-<p>Example: Controlled-NOT (CNOT) gate matrix:
-     [
-     \text{CNOT} = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \
-     0 &amp; 1 &amp; 0 &amp; 0 \
-     0 &amp; 0 &amp; 0 &amp; 1 \
-     0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
-     ]</p>
-</li>
-<li>
-<p><strong>Toffoli Gate (CCNOT):</strong></p>
-</li>
-<li>A three-qubit gate that flips the target qubit if both control qubits are <span class="arithmatex">\( |1\rangle \)</span>.</li>
-<li>Matrix representation:
-     [
-     \text{Toffoli} = \begin{bmatrix}
-     1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
-     0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
-     0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
-     0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
-     0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \
-     0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \
-     0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \
-     0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
-     ]</li>
-<li>The Toffoli gate is universal for reversible computation and forms a key component of quantum circuits.
-% Note for Readers
+<p>\begin{itemize}
+    \item \textbf{Bloch Sphere Representation:}
+    - A qubit's state <span class="arithmatex">\( |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle \)</span> is visualized on the Bloch Sphere:
+     - <span class="arithmatex">\( \theta \)</span>: Angle between the state vector and the Z-axis.
+     - <span class="arithmatex">\( \phi \)</span>: Phase angle in the XY-plane.
+    - Key Points:
+     - <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span> lie on the Z-axis.
+     - Superpositions are points on the surface.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span></pre></div></td><td class="code"><div><pre><span></span><code>\item \textbf{Eigenstates and Eigenvectors:}
+- Example: For the Pauli-Z operator (\( Z \)):
+ - \( Z|0\rangle = +|0\rangle \) (eigenvalue \( +1 \)).
+ - \( Z|1\rangle = -|1\rangle \) (eigenvalue \( -1 \)).
+- Measurement outcomes align with these eigenstates.
+- Matrix representation:
+ \[
+ Z = \begin{bmatrix} 1 &amp; 0 \\
+ 0 &amp; -1 \end{bmatrix}
+ \]
+
+\item \textbf{Projection Operator:}
+- Projects a state onto a specific eigenstate:
+ \[
+ P_0 = |0\rangle\langle0|, \quad P_1 = |1\rangle\langle1|
+ \]
+- If \( |\psi\rangle = a|0\rangle + b|1\rangle \), projection onto \( |0\rangle \) yields:
+ \[
+ P_0|\psi\rangle = a|0\rangle
+ \]
+- Matrix representations:
+ \[
+ P_0 = \begin{bmatrix} 1 &amp; 0 \\
+ 0 &amp; 0 \end{bmatrix}, \quad P_1 = \begin{bmatrix} 0 &amp; 0 \\
+ 0 &amp; 1 \end{bmatrix}
+ \]
+
+\item \textbf{Two-Qubit States and Matrices:}
+- A general two-qubit state:
+ \[
+ |\psi\rangle = c_{00}|00\rangle + c_{01}|01\rangle + c_{10}|10\rangle + c_{11}|11\rangle
+ \]
+ - Coefficients \( c_{ij} \) are complex amplitudes satisfying normalization: \( \sum |c_{ij}|^2 = 1 \).
+- Matrix representation of a two-qubit system \( |\psi\rangle \):
+ \[
+ |\psi\rangle = \begin{bmatrix} c_{00} \\
+ c_{01} \\
+ c_{10} \\
+ c_{11} \end{bmatrix}
+ \]
+- Example: Controlled-NOT (CNOT) gate matrix:
+ \[
+ \text{CNOT} = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\
+ 0 &amp; 1 &amp; 0 &amp; 0 \\
+ 0 &amp; 0 &amp; 0 &amp; 1 \\
+ 0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
+ \]
+
+   - The Toffoli gate is universal for reversible computation and forms a key component of quantum circuits.
+</code></pre></div></td></tr></table></div>
+<p>\end{itemize}</p>
+<p>% Note for Readers
 \vspace{1cm}
-\noindent{\textbf{Note:}} This document summarizes key concepts and examples from lectures on Quantum Computing. For more details and practical demonstrations, refer to accompanying resources or the Qiskit documentation.</li>
-</ol>
+\noindent{\textbf{Note:}} This document summarizes key concepts and examples from lectures on Quantum Computing. For more details and practical demonstrations, refer to accompanying resources or the Qiskit documentation.</p>
 <p>\end{document}</p>
 
 
