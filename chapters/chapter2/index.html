@@ -552,24 +552,22 @@
 
 
 <h1 id="chapter-2-basis-of-quantum">Chapter 2: Basis of quantum</h1>
-<p>\documentclass{article}
-\usepackage{amsmath, amssymb, braket}</p>
 <p>\title{Introduction to Quantum Computing and Physical Basics of Computing}
 \author{}
 \date{}</p>
-<p>\begin{document}</p>
 <p>\maketitle</p>
 <p>\section*{Class Lecture: Fundamental Quantum Computing Concepts}</p>
 <p>Good morning, everyone! Today we're going to explore some fundamental concepts in quantum computing that help us understand how quantum systems differ from classical systems and the unique properties of quantum operations.</p>
 <p>\section{Information Scaling in Classical vs. Quantum Computing}</p>
 <p>\textbf{Question:} How does the information content of a computing system scale under classical vs. quantum computing with each extra (q)bit added to the system? How does the picture change after measurement?</p>
 <p>In \textbf{classical computing}, we work with bits that can be either 0 or 1. When we add bits to a classical system, the number of possible configurations scales as <span class="arithmatex">\(2^n\)</span>, where <span class="arithmatex">\(n\)</span> is the number of bits. Each additional bit doubles the number of possible states the system can represent.</p>
-<p>For example:
-\begin{itemize}
-    \item 1 bit: 2 possible states (0 or 1)
-    \item 2 bits: 4 possible states (00, 01, 10, 11)
-    \item 3 bits: 8 possible states
-\end{itemize}</p>
+<p>For example:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>\item 1 bit: 2 possible states (0 or 1)
+\item 2 bits: 4 possible states (00, 01, 10, 11)
+\item 3 bits: 8 possible states
+</code></pre></div></td></tr></table></div>
 <p>However, in \textbf{quantum computing}, qubits can exist in superposition states, meaning an <span class="arithmatex">\(n\)</span>-qubit system can represent <span class="arithmatex">\(2^n\)</span> states simultaneously. This property creates exponential scaling potential.</p>
 <p>Upon \textbf{measurement}, the superposition collapses to a single classical outcome, meaning we retrieve only one of the possible configurations, reducing the quantum advantage to a classical state.</p>
 <p>\section{Quantum Gates and the Bloch Sphere}</p>
@@ -591,7 +589,6 @@
 <p>Since measurement fundamentally changes the system and does not allow for state recovery, it is a non-unitary operation.</p>
 <p>\vspace{0.5cm}
 Any questions before we move on to our next topic? These concepts form the foundation of how we think about quantum information processing and the differences between quantum and classical computing paradigms.</p>
-<p>\end{document}</p>
 
 
 
