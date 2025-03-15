@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://ak95am98.github.io/quantum-computing/chapters/chapter21/">
       
       
+        <link rel="prev" href="../chapter11/">
+      
+      
+        <link rel="next" href="../../prompts/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -234,6 +238,8 @@
       
   
   
+    
+  
   
   
     
@@ -253,33 +259,186 @@
       
         
       
-    
-    
-    
-      
-        
         
       
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
-  
-  
-    <a href="../" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Chapters
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2: Basis of quantum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4: New Quantum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3: Quantum States
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 11: LatexA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 21: Try1
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -394,23 +553,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#expanded-key-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Expanded Key Concepts:
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -435,63 +577,90 @@
 <h1 id="chapter-21-try1">Chapter 21: Try1</h1>
 <p>\documentclass[12pt]{article}
 \usepackage[a4paper,margin=1in]{geometry}
-\usepackage{amsmath,amssymb}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    urlcolor=blue,
-    pdfauthor={Quantum Computing Lecture Summaries},
-    pdftitle={Quantum Computing - Expanded Lecture Summaries}
-}</p>
-<p>% Custom section formatting
-\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
-\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}</p>
+\usepackage{amsmath,amssymb}</p>
 <p>\begin{document}</p>
-<p>% Lecture 3
-\section<em Concepts:="Concepts:" Key="Key">{Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator}
-\subsection</em>
-    \item \textbf{Additional Key Identities:}</p>
-<ol>
-<li>\item \textbf{Pauli-X Gate Identity:}
-   [
-   X = HZH
-   ]</li>
-<li>The Pauli-X (NOT) gate can be expressed as a combination of Hadamard (<span class="arithmatex">\( H \)</span>) and Pauli-Z (<span class="arithmatex">\( Z \)</span>) gates.</li>
-<li>
-<p>Matrix representation of the Pauli-X gate:
-     [
-     X = \begin{bmatrix} 0 &amp; 1 \
-     1 &amp; 0 \end{bmatrix}
-     ]</p>
-</li>
-<li>
-<p>\item \textbf{Hadamard Transform:}
-   [
-   H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \quad H|1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
-   ]</p>
-</li>
-<li>The Hadamard gate creates superposition states, an essential aspect of quantum computation.</li>
-<li>Matrix representation:
-     [
-     H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 &amp; 1 \
-     1 &amp; -1 \end{bmatrix}
-     ]</li>
-</ol>
-<h4 id="expanded-key-concepts">Expanded Key Concepts:</h4>
-<ol>
-<li><strong>Bloch Sphere Representation:</strong></li>
-<li>A qubit's state <span class="arithmatex">\( |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle \)</span> is visualized on the Bloch Sphere:<ul>
-<li><span class="arithmatex">\( \theta \)</span>: Angle between the state vector and the Z-axis.</li>
-<li><span class="arithmatex">\( \phi \)</span>: Phase angle in the XY-plane.</li>
-</ul>
-</li>
-<li>Key Points:<ul>
-<li><span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span> lie on the Z-axis.</li>
-<li>Superpositions are points on the su</li>
-</ul>
-</li>
-</ol>
+<p>\title{Quantum Computing - Expanded Lecture Summaries}
+\author{Quantum Computing Lecture Summaries}
+\date{}
+\maketitle</p>
+<p>\section*{Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator}</p>
+<p>\subsection*{Key Concepts:}</p>
+<p>\textbf{Pauli-X Gate Identity:}
+[
+X = HZH
+]
+The Pauli-X (NOT) gate can be expressed as a combination of Hadamard (<span class="arithmatex">\( H \)</span>) and Pauli-Z (<span class="arithmatex">\( Z \)</span>) gates.
+Matrix representation:
+[
+X = \begin{bmatrix} 0 &amp; 1 \
+1 &amp; 0 \end{bmatrix}
+]</p>
+<p>\textbf{Hadamard Transform:}
+[
+H|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \quad H|1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
+]
+Matrix representation:
+[
+H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 &amp; 1 \
+1 &amp; -1 \end{bmatrix}
+]</p>
+<p>\subsection*{Bloch Sphere Representation}
+A qubit's state <span class="arithmatex">\( |\psi\rangle = \cos\frac{\theta}{2}|0\rangle + e^{i\phi}\sin\frac{\theta}{2}|1\rangle \)</span> is visualized on the Bloch Sphere.</p>
+<p>\subsection*{Eigenstates and Eigenvectors}
+For the Pauli-Z operator (<span class="arithmatex">\( Z \)</span>):
+[
+Z|0\rangle = +|0\rangle, \quad Z|1\rangle = -|1\rangle
+]
+Matrix representation:
+[
+Z = \begin{bmatrix} 1 &amp; 0 \
+0 &amp; -1 \end{bmatrix}
+]</p>
+<p>\subsection*{Projection Operator}
+Projects a state onto a specific eigenstate:
+[
+P_0 = |0\rangle\langle0|, \quad P_1 = |1\rangle\langle1|
+]
+Matrix representations:
+[
+P_0 = \begin{bmatrix} 1 &amp; 0 \
+0 &amp; 0 \end{bmatrix}, \quad P_1 = \begin{bmatrix} 0 &amp; 0 \
+0 &amp; 1 \end{bmatrix}
+]</p>
+<p>\subsection*{Two-Qubit States and Matrices}
+General two-qubit state:
+[
+|\psi\rangle = c_{00}|00\rangle + c_{01}|01\rangle + c_{10}|10\rangle + c_{11}|11\rangle
+]
+Matrix representation:
+[
+|\psi\rangle = \begin{bmatrix} c_{00} \
+c_{01} \
+c_{10} \
+c_{11} \end{bmatrix}
+]</p>
+<p>\subsection*{Controlled-NOT (CNOT) Gate}
+[
+\text{CNOT} = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \
+0 &amp; 1 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 0 &amp; 1 \
+0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
+]</p>
+<p>\subsection*{Toffoli Gate (CCNOT)}
+[
+\text{Toffoli} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
+]</p>
+<p>\vspace{1cm}
+\textbf{Note:} This document summarizes key concepts and examples from lectures on Quantum Computing.</p>
+<p>\end{document}</p>
 
 
 
@@ -522,6 +691,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../chapter11/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 11: LatexA">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 11: LatexA
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../prompts/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
