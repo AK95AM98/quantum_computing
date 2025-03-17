@@ -575,107 +575,137 @@
 
 
 <h1 id="chapter-1-introduction">Chapter 1: Introduction</h1>
-<p>\maketitle</p>
-<p>\section{Introduction}
-Quantum computing relies on quantum mechanics principles to manipulate information. This lecture introduces:
-\begin{itemize}
-    \item Basis and Orthonormal Basis
-    \item Bra-Ket Notation (Dirac Notation)
-    \item Quantum Measurement
-    \item Representing a state in different basis sets
-\end{itemize}</p>
-<p>\section{Basis and Orthonormal Basis}
-A basis is a set of vectors that spans a vector space. Any vector in that space can be expressed as a linear combination of basis vectors.
-For example, in <span class="arithmatex">\(\mathbb{R}^2\)</span>, the standard basis is:
-$$
-e_1 = \begin{bmatrix}1\0\end{bmatrix}, \quad e_2 = \begin{bmatrix}0\1\end{bmatrix}
-$$</p>
-<p>A vector <span class="arithmatex">\(v \in \mathbb{R}^2\)</span> can be written as:
-$$
-    v = a e_1 + b e_2
-$$
-A basis is orthonormal if:
-\begin{enumerate}
-    \item The basis vectors are orthogonal: <span class="arithmatex">\(\langle e_i | e_j \rangle = 0\)</span> for <span class="arithmatex">\(i \neq j\)</span>.
-    \item The basis vectors are normalized: <span class="arithmatex">\(\langle e_i | e_i \rangle = 1\)</span>.
-\end{enumerate}
-The computational basis for qubits is:
-$$
-    |0\rangle = \begin{bmatrix}1\0\end{bmatrix}, \quad |1\rangle = \begin{bmatrix}0\1\end{bmatrix}
-$$</p>
-<p>\section{Bra-Ket Notation (Dirac Notation)}
-\begin{itemize}
-    \item A ket <span class="arithmatex">\(|\psi\rangle\)</span> represents a column vector in Hilbert space.
-    \item A bra <span class="arithmatex">\(\langle \psi|\)</span> is the conjugate transpose (row vector).
-\end{itemize}
-Example:
-$$
-    |\psi\rangle = \begin{bmatrix}a\b\end{bmatrix}, \quad \langle \psi| = \begin{bmatrix}a^<em> &amp; b^</em>\end{bmatrix}
-$$
-Inner product:
-$$
-    \langle \phi | \psi \rangle = \sum_i \phi^*_i \psi_i
-$$
-Outer product:
-$$
-    |\psi\rangle \langle \phi|
-$$</p>
-<p>\section{Quantum Measurement}
-A qubit state can be written as:
-$$
-    |\psi\rangle = \alpha |0\rangle + \beta |1\rangle
-$$
-where <span class="arithmatex">\(\alpha, \beta\)</span> are complex numbers satisfying <span class="arithmatex">\(|\alpha|^2 + |\beta|^2 = 1\)</span>.
-When measured in the computational basis:
-\begin{itemize}
-    \item <span class="arithmatex">\(|0\rangle\)</span> occurs with probability <span class="arithmatex">\(|\alpha|^2\)</span>.
-    \item <span class="arithmatex">\(|1\rangle\)</span> occurs with probability <span class="arithmatex">\(|\beta|^2\)</span>.
-\end{itemize}
-Example:
-$$
-    |\psi\rangle = \frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle
-$$
-Measurement results in <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span> with equal probability.</p>
-<p>\section{Representing a State in Different Basis Sets}
-Besides the computational basis, we can use:
-\subsection{Hadamard Basis}
-$
-    |+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
-$$
-\subsection{Eigenbasis of Pauli-X}
-Eigenvectors:
-$$
-    X = \begin{bmatrix} 0 &amp; 1 \ 1 &amp; 0 \end{bmatrix}
-$$
-$$
-    |+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
-$$</p>
-<p>\section{Python and Qiskit Implementation}
-\begin{verbatim}
-from qiskit import QuantumCircuit, Aer, execute
-from qiskit.visualization import plot_bloch_vector
-import numpy as np</p>
-<h1 id="define-a-quantum-circuit-with-one-qubit">Define a quantum circuit with one qubit</h1>
-<p>qc = QuantumCircuit(1)
-qc.h(0)  # Apply Hadamard gate
-qc.measure_all()</p>
-<h1 id="simulate">Simulate</h1>
-<p>simulator = Aer.get_backend('aer_simulator')
-result = execute(qc, simulator, shots=1000).result()
-counts = result.get_counts()
-print("Measurement Results:", counts)</p>
-<p>def plot_state():
-    plot_bloch_vector($1/np.sqrt(2), 0, 1/np.sqrt(2)])  # |+&gt; state
-plot_state()
-\end{verbatim}</p>
-<p>\section{Summary}
-\begin{itemize}
-    \item Basis and Orthonormal Basis: Computational and Hadamard basis.
-    \item Bra-Ket Notation: Representation of quantum states.
-    \item Measurement: Probabilistic collapse to basis states.
-    \item Different Basis Representations: Transforming states across different bases.
-\end{itemize}</p>
-<p>\end{document}</p>
+<h1 id="quantum-computing-expanded-lecture-summaries">Quantum Computing - Expanded Lecture Summaries</h1>
+<h2 id="lecture-1-introduction-to-quantum-physics-and-quantum-computing">Lecture 1: Introduction to Quantum Physics and Quantum Computing</h2>
+<h3 id="key-concepts">Key Concepts:</h3>
+<ol>
+<li><strong>Fundamental Quantum Principles:</strong></li>
+<li>Concepts: Superposition, entanglement, and wave-particle duality.</li>
+<li>
+<p>Example: Double-slit experiment and visualization of spin states.</p>
+</li>
+<li>
+<p><strong>Quantum vs. Classical Systems:</strong></p>
+</li>
+<li>Classical bits (binary states: 0 and 1) vs. quantum bits (qubits, which can exist in superposition).</li>
+<li>
+<p>Example: A coin with heads or tails (classical) vs. a spinning coin (quantum).</p>
+</li>
+<li>
+<p><strong>Superposition and Measurement:</strong></p>
+</li>
+<li>A qubit can be in a linear combination of <span class="arithmatex">\(|0\rangle\)</span> and <span class="arithmatex">\(|1\rangle\)</span>.</li>
+<li>Measurement collapses the qubit’s state into either <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span>.</li>
+<li>Example: Using Qiskit to create and measure a superposition state.</li>
+</ol>
+<h2 id="lecture-2-basis-orthonormal-basis-bra-ket-notation-and-measurement">Lecture 2: Basis, Orthonormal Basis, Bra-Ket Notation, and Measurement</h2>
+<h3 id="key-concepts_1">Key Concepts:</h3>
+<ol>
+<li><strong>Basis States and Orthonormality:</strong></li>
+<li>Basis states form the foundation of qubit representation.</li>
+<li>Orthonormality ensures <span class="arithmatex">\(|0\rangle\)</span> and <span class="arithmatex">\(|1\rangle\)</span> are distinct and normalized.</li>
+<li>
+<p>Example: Demonstrating orthogonality of <span class="arithmatex">\(|0\rangle\)</span> and <span class="arithmatex">\(|1\rangle\)</span> through dot product.</p>
+</li>
+<li>
+<p><strong>Bra-Ket Notation:</strong></p>
+</li>
+<li>“Ket” (<span class="arithmatex">\(|\ \rangle\)</span>) represents a state; “Bra” (<span class="arithmatex">\(\langle \ |\)</span>) is its conjugate transpose.</li>
+<li>
+<p>Example: Writing <span class="arithmatex">\(|\psi\rangle = \alpha |0\rangle + \beta |1\rangle\)</span>.</p>
+</li>
+<li>
+<p><strong>Quantum Measurement:</strong></p>
+</li>
+<li>Probability of measurement is determined by the squared magnitude of coefficients.</li>
+<li>Example: Simulating measurement of <span class="arithmatex">\(|\psi\rangle\)</span> using Qiskit’s Aer simulator.</li>
+</ol>
+<h2 id="lecture-3-bloch-sphere-eigenstates-eigenvectors-projection-operator">Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator</h2>
+<h3 id="key-concepts_2">Key Concepts:</h3>
+<ol>
+<li><strong>Bloch Sphere Representation:</strong></li>
+<li>Visualizing qubit states as points on a unit sphere.</li>
+<li>
+<p>Example: Show <span class="arithmatex">\(|0\rangle\)</span> and <span class="arithmatex">\(|1\rangle\)</span> on the poles; visualize superposition states on the surface.</p>
+</li>
+<li>
+<p><strong>Eigenstates and Eigenvectors:</strong></p>
+</li>
+<li>Eigenstates of an operator correspond to measurable quantities.</li>
+<li>
+<p>Example: Pauli-Z eigenstates are <span class="arithmatex">\(|0\rangle\)</span> and <span class="arithmatex">\(|1\rangle\)</span>.</p>
+</li>
+<li>
+<p><strong>Projection Operator:</strong></p>
+</li>
+<li>Projects a quantum state onto a particular eigenstate.</li>
+<li>Example: Project <span class="arithmatex">\(|\psi\rangle = |0\rangle + |1\rangle\)</span> onto <span class="arithmatex">\(|0\rangle\)</span> using Qiskit.</li>
+</ol>
+<h2 id="lecture-4-binary-data-qubits-multi-qubits-quantum-gates-and-classical-gates">Lecture 4: Binary Data, Qubits, Multi-Qubits, Quantum Gates, and Classical Gates</h2>
+<h3 id="key-concepts_3">Key Concepts:</h3>
+<ol>
+<li><strong>Single-Qubit Representation:</strong></li>
+<li>Binary data encoded into <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span>.</li>
+<li>
+<p>Example: Encode binary “0” as <span class="arithmatex">\(|0\rangle\)</span> and binary “1” as <span class="arithmatex">\(|1\rangle\)</span>.</p>
+</li>
+<li>
+<p><strong>Multi-Qubit States:</strong></p>
+</li>
+<li>Tensor products form multi-qubit systems (e.g., <span class="arithmatex">\(|00\rangle\)</span>, <span class="arithmatex">\(|01\rangle\)</span>).</li>
+<li>
+<p>Example: Constructing a 2-qubit system in Qiskit.</p>
+</li>
+<li>
+<p><strong>Quantum Gates:</strong></p>
+</li>
+<li>Operations like X (NOT), H (Hadamard), and Z gates.</li>
+<li>Example: Apply an H gate to <span class="arithmatex">\(|0\rangle\)</span> to create superposition.</li>
+</ol>
+<h2 id="lecture-5-quantum-circuits-and-algorithms">Lecture 5: Quantum Circuits and Algorithms</h2>
+<h3 id="key-concepts_4">Key Concepts:</h3>
+<ol>
+<li><strong>Quantum Circuit Design:</strong></li>
+<li>Using Qiskit to construct quantum circuits with gates and measurement.</li>
+<li>
+<p>Example: Implementing a basic circuit with Hadamard and CNOT gates.</p>
+</li>
+<li>
+<p><strong>Quantum Algorithms:</strong></p>
+</li>
+<li>Introduction to algorithms like Deutsch-Josza and Grover's search.</li>
+<li>Example: Simulate the Deutsch-Josza algorithm to identify constant functions.</li>
+</ol>
+<h2 id="lecture-6-quantum-error-correction">Lecture 6: Quantum Error Correction</h2>
+<h3 id="key-concepts_5">Key Concepts:</h3>
+<ol>
+<li><strong>Error Sources in Quantum Computing:</strong></li>
+<li>Errors from decoherence and gate imperfections.</li>
+<li>
+<p>Example: Simulate noise in a quantum circuit with Qiskit.</p>
+</li>
+<li>
+<p><strong>Error Correction Codes:</strong></p>
+</li>
+<li>Use of redundancy and encoding to detect and correct errors.</li>
+<li>Example: Implementing the three-qubit bit-flip code in Qiskit.</li>
+</ol>
+<h2 id="lecture-7-advanced-topics-in-quantum-computing">Lecture 7: Advanced Topics in Quantum Computing</h2>
+<h3 id="key-concepts_6">Key Concepts:</h3>
+<ol>
+<li><strong>Quantum Entanglement:</strong></li>
+<li>Strong correlations between qubits beyond classical limits.</li>
+<li>
+<p>Example: Generate Bell states and verify entanglement properties.</p>
+</li>
+<li>
+<p><strong>Quantum Cryptography:</strong></p>
+</li>
+<li>Use of quantum principles for secure communication.</li>
+<li>Example: Simulate the BB84 protocol for quantum key distribution.</li>
+</ol>
+<hr />
+<p><strong>Note:</strong> This document summarizes key concepts and examples from lectures on Quantum Computing. For more details and practical demonstrations, refer to accompanying resources or the Qiskit documentation.</p>
 
 
 

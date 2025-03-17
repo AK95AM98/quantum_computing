@@ -575,87 +575,41 @@
 
 
 <h1 id="chapter-3-quantum-states">Chapter 3: Quantum States</h1>
-<p>Lecture 3
-\documentclass{article}
-\usepackage{amsmath}</p>
-<p>\begin{document}</p>
-<p>\section{Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, and Gates}</p>
-<p>\subsection*{Additional Key Identities}</p>
-<p>\textbf{Pauli-X Gate Identity:}<br />
-The Pauli-X (NOT) gate can be expressed as a combination of Hadamard (<span class="arithmatex">\( H \)</span>) and Pauli-Z (<span class="arithmatex">\( Z \)</span>) gates:</p>
-<p>$
-X = H Z H
-$</p>
-<p>Matrix representation of the Pauli-X gate:</p>
-<p>$
-X = \begin{bmatrix} 
-0 &amp; 1 \ 
-1 &amp; 0 
-\end{bmatrix}
-$</p>
-<p>\subsection*{Hadamard Gate}</p>
-<p>The Hadamard gate creates superposition states:</p>
-<p>$
-H |0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle), \quad
-H |1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)
-$</p>
-<p>Matrix representation:</p>
-<p>$
-H = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 &amp; 1 \ 1 &amp; -1 \end{bmatrix}
-$</p>
-<p>\subsection*{Bloch Sphere Representation}</p>
-<p>A qubit state can be visualized on the Bloch Sphere as:</p>
-<p>$
-|\psi\rangle = \cos\frac{\theta}{2} |0\rangle + e^{i\phi} \sin\frac{\theta}{2} |1\rangle
-$</p>
-<p>where:
-\begin{itemize}
-    \item <span class="arithmatex">\( \theta \)</span> determines the relative contribution of <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>.
-    \item <span class="arithmatex">\( \phi \)</span> represents the phase difference between <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>.
-\end{itemize}</p>
-<p>\subsection*{Eigenstates and Eigenvectors of Pauli-Z Gate}</p>
-<p>\textbf{Pauli-Z Operator (<span class="arithmatex">\( Z \)</span>) Eigenstates:}</p>
-<p>$
-Z |0\rangle = +|0\rangle, \quad Z|1\rangle = -|1\rangle
-$</p>
-<p>Matrix representation:</p>
-<p>$
-Z = \begin{bmatrix} 1 &amp; 0 \ 0 &amp; -1 \end{bmatrix}
-$</p>
-<p>\subsection*{Eigenstates and Eigenvectors of Pauli-X Gate}</p>
-<p>\textbf{Pauli-X Operator (<span class="arithmatex">\( X \)</span>) Eigenstates:}</p>
-<div class="arithmatex">\[\begin{equation}
-    X |\pm\rangle = \pm |\pm\rangle
-\end{equation}\]</div>
-<p>where the eigenstates are:</p>
-<p>$
-|+\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ 1 \end{bmatrix}, \quad
-|-\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \ -1 \end{bmatrix}
-$</p>
-<p>\subsection*{Projection Operators}</p>
-<p>A projection operator projects a state onto a specific eigenstate:</p>
-<p>For example, if we consider a system with eigenstates <span class="arithmatex">\( |0\rangle \)</span> and <span class="arithmatex">\( |1\rangle \)</span>, the projection operators are:</p>
-<p>$
-P_0 = |0\rangle \langle 0| = \begin{bmatrix} 1 &amp; 0 \ 0 &amp; 0 \end{bmatrix}, \quad
-P_1 = \begin{bmatrix} 0 &amp; 0 \ 0 &amp; 1 \end{bmatrix}
-$</p>
-<p>The probability of measuring <span class="arithmatex">\( |0\rangle \)</span> or <span class="arithmatex">\( |1\rangle \)</span>:</p>
-<p>$
-P(|0\rangle) = |\langle 0 | \psi \rangle |^2, \quad P(|1\rangle) = |\langle 1 | \psi \rangle |^2
-$</p>
-<p>\subsection*{Two-Qubit Systems and CNOT Gate}</p>
-<p>A general two-qubit state can be written as:</p>
-<p>$
-|\psi\rangle = c_{00}|00\rangle + c_{01}|01\rangle + c_{10}|10\rangle + c_{11}|11\rangle
-$</p>
-<p>where the coefficients satisfy:</p>
-<p>$
-|c_{00}|^2 + |c_{01}|^2 + |c_{10}|^2 + |c_{11}|^2 = 1
-$</p>
-<p>Matrix representation of the Controlled-NOT (CNOT) gate:</p>
-<p>$
-CNOT = \begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \ 0 &amp; 1 &amp; 0 &amp; 0 \ 0 &amp; 0 &amp; 0 &amp; 1 \ 0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}
-$</p>
+<h1 id="math-equations-example">Math Equations Example</h1>
+<h2 id="basic-equations">Basic Equations</h2>
+<p><strong>Inline equation:</strong><br />
+<span class="arithmatex">\(E = mc^2\)</span></p>
+<p><strong>Display equation:</strong><br />
+<span class="arithmatex">\(F = G \frac{m_1 m_2}{r^2}\)</span></p>
+<p><strong>Numbered equation:</strong><br />
+<span class="arithmatex">\(a^2 + b^2 = c^2\)</span>  (1)</p>
+<h2 id="more-complex-examples">More Complex Examples</h2>
+<p><strong>Aligned equations:</strong>
+$$
+(a + b)^2 = a^2 + 2ab + b^2 \
+(a - b)^2 = a^2 - 2ab + b^2
+$$</p>
+<p><strong>Matrix:</strong>
+$$
+A = \begin{pmatrix}
+    a_{11} &amp; a_{12} &amp; a_{13} \
+    a_{21} &amp; a_{22} &amp; a_{23} \
+    a_{31} &amp; a_{32} &amp; a_{33}
+\end{pmatrix}
+$$</p>
+<p><strong>Fractions and integrals:</strong>
+$$
+\int_{0}^{\infty} \frac{x^2}{e^x - 1} \, dx = \frac{\pi^4}{15}
+$$</p>
+<h2 id="advanced-math">Advanced Math</h2>
+<p><strong>Differential equation:</strong>
+$$
+\frac{d^2y}{dx^2} + p(x)\frac{dy}{dx} + q(x)y = f(x)
+$$</p>
+<p><strong>Multiline equation:</strong>
+$$
+(a + b + c + d)^2 = a^2 + b^2 + c^2 + d^2 + 2ab + 2ac + 2ad + 2bc + 2bd + 2cd
+$$</p>
 
 
 
