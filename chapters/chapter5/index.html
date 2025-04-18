@@ -12,13 +12,13 @@
         <meta name="author" content="Sharat B">
       
       
-        <link rel="canonical" href="https://ak95am98.github.io/quantum-computing/chapters/chapter10/">
+        <link rel="canonical" href="https://ak95am98.github.io/quantum-computing/chapters/chapter5/">
       
       
-        <link rel="prev" href="../chapter1/">
+        <link rel="prev" href="../chapter3/">
       
       
-        <link rel="next" href="../chapter2/">
+        <link rel="next" href="../chapter11/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Tutorial - Unitary matrices and orthonormal basis - quantum-computing</title>
+        <title>Chapter 5: Algorithms - quantum-computing</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-unitary-matrices-and-orthonormal-basis" class="md-skip">
+        <a href="#chapter-5-algorithms" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial - Unitary matrices and orthonormal basis
+              Chapter 5: Algorithms
             
           </span>
         </div>
@@ -330,19 +330,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -351,7 +342,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -424,10 +414,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../chapter5/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -436,6 +435,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -612,7 +612,7 @@
                   
 
   
-    <a href="https://github.com/ak95am98/quantum-computing/blob/master/docs/chapters/chapter10.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/ak95am98/quantum-computing/blob/master/docs/chapters/chapter5.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -620,175 +620,102 @@
   
 
 
-<h1 id="tutorial-unitary-matrices-and-orthonormal-basis">Tutorial - Unitary matrices and orthonormal basis</h1>
-<h1 id="cs4268-quantum-computing-tutorial-1">CS4268 - Quantum Computing Tutorial - 1</h1>
-<h2 id="general-information">General Information</h2>
-<ul>
-<li><strong>Inline equations</strong> to be wrapped in single dollar signs ($).</li>
-<li><strong>Block equations</strong> to be wrapped in double dollar signs ($$).</li>
-</ul>
-<hr />
-<p>Here is the <strong>LaTeX-formatted Markdown</strong> version for your Quantum Computing Tutorial:</p>
-<hr />
-<h2 id="general-information-useful-for-all-questions"><strong>General Information (Useful for All Questions)</strong></h2>
-<ul>
-<li><strong>Stochastic Matrix</strong>: A square matrix is stochastic if and only if:</li>
-<li>All its entries are non-negative reals.</li>
-<li>
-<p>The entries of each of its columns sum to 1.</p>
-</li>
-<li>
-<p><strong>Unitary Matrix</strong>: A square matrix <span class="arithmatex">\( U \)</span> is unitary if and only if it satisfies:
-  $$
-  U U^\dagger = U^\dagger U = I
-  $$
-  where <span class="arithmatex">\( U^\dagger \)</span> is the conjugate transpose of <span class="arithmatex">\( U \)</span>, and <span class="arithmatex">\( I \)</span> is the identity matrix.</p>
-</li>
-<li>
-<p><strong>Inner Product</strong>:<br />
-  For two column vectors <span class="arithmatex">\( v \)</span> and <span class="arithmatex">\( u \)</span>, their inner product is defined as:
-  $$
-  \langle v, u \rangle = v^\dagger u, \quad \langle u, v \rangle = u^\dagger v
-  $$</p>
-</li>
-<li>
-<p><strong><span class="arithmatex">\( p \)</span>-Norm of a Vector</strong>:<br />
-  The <span class="arithmatex">\( p \)</span>-norm of a vector <span class="arithmatex">\( v = (v_1, v_2, \dots, v_n) \)</span> in a complex <span class="arithmatex">\( n \)</span>-dimensional vector space is given by:
-  $$
-  | v |_p = \left( |v_1|^p + |v_2|^p + \dots + |v_n|^p \right)^{1/p}
-  $$</p>
-</li>
-<li>
-<p><strong>Orthonormal Set</strong>:<br />
-  A set of vectors <span class="arithmatex">\( \{ v_1, v_2, \dots, v_n \} \)</span> is <strong>orthonormal</strong> if:</p>
-</li>
-<li>Each vector has an <span class="arithmatex">\( \ell_2 \)</span>-norm of 1.</li>
-<li>
-<p>The inner products of distinct vectors are 0.</p>
-</li>
-<li>
-<p><strong>Singular Value Decomposition (SVD)</strong>:<br />
-  For every <span class="arithmatex">\( n \times n \)</span> complex matrix <span class="arithmatex">\( A \)</span> of rank <span class="arithmatex">\( r \leq n \)</span>, there exist unique positive real values <span class="arithmatex">\( s_1, s_2, \dots, s_r \)</span> and orthonormal sets <span class="arithmatex">\( \{ v_1, v_2, \dots, v_r \} \)</span>, <span class="arithmatex">\( \{ w_1, w_2, \dots, w_r \} \)</span> such that:
-  $$
-  A = \sum_{i=1}^{r} s_i w_i v_i^\dagger
-  $$
-  where <span class="arithmatex">\( s_i \)</span> are <strong>singular values</strong>, and <span class="arithmatex">\( \{ v_i \}, \{ w_i \} \)</span> are <strong>right and left singular vectors</strong>, respectively.</p>
-</li>
-</ul>
-<hr />
-<h2 id="question-1-unitary-matrices-and-orthonormality"><strong>Question 1: Unitary Matrices and Orthonormality</strong></h2>
-<h3 id="question"><strong>Question:</strong></h3>
-<p>A matrix <span class="arithmatex">\( U \)</span> is unitary if it satisfies:
-$$
-U^\dagger U = U U^\dagger = I
-$$
-Given the orthonormal states:
-$$
-v_1 = \frac{3}{5} \alpha \otimes \alpha + \frac{4}{5} \beta \otimes \beta
-$$
-$$
-v_2 = \frac{4}{5} \alpha \otimes \alpha - \frac{3}{5} \beta \otimes \beta
-$$
-$$
-v_3 = \frac{2}{\sqrt{5}} \alpha \otimes \beta + \frac{i}{\sqrt{5}} \beta \otimes \alpha
-$$
-$$
-v_4 = \frac{1}{\sqrt{5}} \alpha \otimes \beta - \frac{2i}{\sqrt{5}} \beta \otimes \alpha
-$$
-Verify that these states form an orthonormal basis, i.e., show that:
-$$
-\langle v_i, v_j \rangle = \delta_{ij}
-$$
-where <span class="arithmatex">\( \delta_{ij} \)</span> is the Kronecker delta.</p>
-<h3 id="answer"><strong>Answer:</strong></h3>
-<p>We compute the inner product for each pair:
-$$
-\langle v_i, v_j \rangle = \sum_{k} (v_i^k)^* v_j^k
-$$
-After computing for all pairs, we find:
-$$
-\langle v_i, v_j \rangle = 1 \text{ for } i = j, \quad 0 \text{ for } i \neq j
-$$
-Thus, the given states are mutually orthonormal, forming a valid basis.</p>
-<h3 id="takeaway"><strong>Takeaway:</strong></h3>
-<ul>
-<li>The set of vectors given is <strong>orthonormal</strong> and forms a <strong>valid quantum basis</strong>.</li>
-<li>Unitary matrices preserve the inner product and are essential in quantum mechanics.</li>
-</ul>
-<hr />
-<h2 id="question-2-orthonormal-basis-and-identity-matrix"><strong>Question 2: Orthonormal Basis and Identity Matrix</strong></h2>
-<h3 id="question_1"><strong>Question:</strong></h3>
-<p>Given an orthonormal set <span class="arithmatex">\( \{v_1, v_2, ..., v_n\} \)</span>, show that the sum of their outer products forms the identity matrix:
-$$
-A = \sum_{i=1}^{n} v_i v_i^\dagger = I_{n\times n}
-$$
-Verify this property by applying <span class="arithmatex">\( A \)</span> to an arbitrary vector <span class="arithmatex">\( w \)</span>.</p>
-<h3 id="answer_1"><strong>Answer:</strong></h3>
-<p>Let <span class="arithmatex">\( w \)</span> be any arbitrary vector expressed in terms of the basis:
-$$
-w = \sum_{i=1}^{n} \alpha_i v_i
-$$
-Applying <span class="arithmatex">\( A \)</span>:
-$$
-A w = \sum_{i=1}^{n} v_i v_i^\dagger \sum_{j=1}^{n} \alpha_j v_j
-$$
-Since <span class="arithmatex">\( A w = w \)</span>, <span class="arithmatex">\( A \)</span> acts as the identity matrix.</p>
-<h3 id="takeaway_1"><strong>Takeaway:</strong></h3>
-<ul>
-<li>Any set of <strong>orthonormal basis vectors</strong> satisfies <span class="arithmatex">\( \sum v_i v_i^\dagger = I \)</span>.</li>
-<li>This property is crucial in <strong>quantum state representation</strong>.</li>
-</ul>
-<hr />
-<h2 id="question-3-unitary-matrix-properties"><strong>Question 3: Unitary Matrix Properties</strong></h2>
-<h3 id="question_2"><strong>Question:</strong></h3>
-<p>Show that a unitary matrix <span class="arithmatex">\( U \)</span> satisfies the singular value decomposition (SVD) property:
-$$
-U = \sum_{i=1}^{r} s_i w_i v_i^\dagger
-$$
-where <span class="arithmatex">\( s_i \)</span> are singular values and <span class="arithmatex">\( \{v_i\} \)</span>, <span class="arithmatex">\( \{w_i\} \)</span> are orthonormal sets. Prove that for unitary matrices, all singular values satisfy <span class="arithmatex">\( s_i = 1 \)</span>.</p>
-<h3 id="answer_2"><strong>Answer:</strong></h3>
-<p>Using SVD:
-$$
-U^\dagger U = \sum_{i=1}^{r} s_i^2 w_i w_i^\dagger = I
-$$
-which is only true if <span class="arithmatex">\( s_i = 1 \)</span> for all <span class="arithmatex">\( i \)</span>. Thus, unitary matrices preserve norms.</p>
-<h3 id="takeaway_2"><strong>Takeaway:</strong></h3>
-<ul>
-<li>Unitary matrices have <strong>singular values equal to 1</strong>.</li>
-<li>They <strong>preserve the length</strong> of quantum states, making them essential for quantum operations.</li>
-</ul>
-<hr />
-<h2 id="question-4-stochastic-matrices-and-norm-preservation"><strong>Question 4: Stochastic Matrices and Norm Preservation</strong></h2>
-<h3 id="question_3"><strong>Question:</strong></h3>
-<p>A <strong>column stochastic matrix</strong> <span class="arithmatex">\( S \)</span> satisfies:
-$$
-\sum_{i=1}^{n} s_{ij} = 1, \quad \forall j
-$$
-Show that for any vector <span class="arithmatex">\( v \)</span>, its <span class="arithmatex">\( \ell_1 \)</span>-norm remains unchanged under <span class="arithmatex">\( S \)</span>:
-$$
-|Sv|_1 = |v|_1
-$$</p>
-<h3 id="answer_3"><strong>Answer:</strong></h3>
+<h1 id="chapter-5-algorithms">Chapter 5: Algorithms</h1>
+<h1 id="quantum-computing-expanded-lecture-summaries">Quantum Computing - Expanded Lecture Summaries</h1>
+<h2 id="lecture-3-bloch-sphere-eigenstates-eigenvectors-projection-operator">Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator</h2>
+<h3 id="key-algorithms">Key Algorithms</h3>
+<h2 id="superdense-coding-with-bell-states">Superdense Coding with Bell States</h2>
+<p>In superdense coding, Alice and Bob share an entangled Bell state initially:</p>
 <div class="arithmatex">\[
-Applying \( S \):
-\[
-w = S v, \quad w_i = \sum_{j=1}^{n} s_{ij} v_j
-\]
-Then:
-\[
-\|w\|_1 = \sum_{i=1}^{n} |w_i| = \sum_{i=1}^{n} \sum_{j=1}^{n} s_{ij} |v_j|
-\]
-Since \( S \) is stochastic:
-\[
-\sum_{i=1}^{n} s_{ij} = 1
-\]
-Thus, \( \|w\|_1 = \|v\|_1 \), proving norm preservation.
+\left| \Phi^+ \right\rangle = \frac{1}{\sqrt{2}} \left( \left| 00 \right\rangle + \left| 11 \right\rangle \right)
 \]</div>
-<h3 id="takeaway_3"><strong>Takeaway:</strong></h3>
+<p>Alice encodes two classical bits of information (00, 01, 10, 11) by applying one of four quantum operations to her qubit:</p>
+<table>
+<thead>
+<tr>
+<th>Classical Bits</th>
+<th>Operation Applied by Alice</th>
+<th>Resulting Bell State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>00</td>
+<td>Identity (<span class="arithmatex">\(I\)</span>)</td>
+<td>$\left</td>
+</tr>
+<tr>
+<td>01</td>
+<td>Pauli-X (<span class="arithmatex">\(X\)</span>)</td>
+<td>$\left</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Pauli-Z (<span class="arithmatex">\(Z\)</span>)</td>
+<td>$\left</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Pauli-Y (<span class="arithmatex">\(iY\)</span>)</td>
+<td>$\left</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bell-states">Bell States</h3>
+<p>The four Bell states can be expressed as:</p>
+<div class="arithmatex">\[
+\left| \Phi^+ \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 0 \\ 0 \\ 1 \end{bmatrix}, \quad
+\left| \Phi^- \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 0 \\ 0 \\ -1 \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\left| \Psi^+ \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 0 \\ 1 \\ 1 \\ 0 \end{bmatrix}, \quad
+\left| \Psi^- \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 0 \\ 1 \\ -1 \\ 0 \end{bmatrix}
+\]</div>
+<h3 id="alices-encoding">Alice's Encoding</h3>
 <ul>
-<li>Stochastic matrices <strong>preserve the <span class="arithmatex">\( \ell_1 \)</span>-norm</strong>.</li>
-<li>They model <strong>probabilistic transformations</strong> in quantum mechanics.</li>
+<li>
+<p>To encode <strong>00</strong>, Alice applies <span class="arithmatex">\(I\)</span>:
+  $$
+  (I \otimes I) \left| \Phi^+ \right\rangle = \left| \Phi^+ \right\rangle
+  $$</p>
+</li>
+<li>
+<p>To encode <strong>01</strong>, Alice applies <span class="arithmatex">\(X\)</span>:
+  $$
+  (X \otimes I) \left| \Phi^+ \right\rangle = \left| \Psi^+ \right\rangle
+  $$</p>
+</li>
+<li>
+<p>To encode <strong>10</strong>, Alice applies <span class="arithmatex">\(Z\)</span>:
+  $$
+  (Z \otimes I) \left| \Phi^+ \right\rangle = \left| \Phi^- \right\rangle
+  $$</p>
+</li>
+<li>
+<p>To encode <strong>11</strong>, Alice applies <span class="arithmatex">\(iY\)</span>:
+  $$
+  (Y \otimes I) \left| \Phi^+ \right\rangle = i \left| \Psi^- \right\rangle
+  $$</p>
+</li>
 </ul>
+<p>(Note: The global phase <span class="arithmatex">\(i\)</span> does not affect measurement outcomes.)</p>
+<h3 id="bobs-decoding">Bob’s Decoding</h3>
+<p>After Alice sends her qubit, Bob has the full two-qubit state. He performs the following steps:</p>
+<ol>
+<li>Applies a <strong>CNOT</strong> gate (Alice’s qubit as control).</li>
+<li>Applies a <strong>Hadamard</strong> gate to Alice’s qubit.</li>
+<li>Measures both qubits in the computational basis.</li>
+</ol>
+<p>This transforms each Bell state back to a basis state:</p>
+<div class="arithmatex">\[
+\begin{align*}
+\left| \Phi^+ \right\rangle &amp;\rightarrow \left| 00 \right\rangle \\
+\left| \Psi^+ \right\rangle &amp;\rightarrow \left| 01 \right\rangle \\
+\left| \Phi^- \right\rangle &amp;\rightarrow \left| 10 \right\rangle \\
+\left| \Psi^- \right\rangle &amp;\rightarrow \left| 11 \right\rangle
+\end{align*}
+\]</div>
+<p>Hence, Bob recovers the exact two-bit message sent by Alice.</p>
 
 
 
@@ -824,7 +751,7 @@ Thus, \( \|w\|_1 = \|v\|_1 \), proving norm preservation.
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../chapter1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Intro">
+          <a href="../chapter3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 3: Teleportation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -834,20 +761,20 @@ Thus, \( \|w\|_1 = \|v\|_1 \), proving norm preservation.
                 Previous
               </span>
               <div class="md-ellipsis">
-                Intro
+                Chapter 3: Teleportation
               </div>
             </div>
           </a>
         
         
           
-          <a href="../chapter2/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 2: Basis of quantum">
+          <a href="../chapter11/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 11: LatexA">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Chapter 2: Basis of quantum
+                Chapter 11: LatexA
               </div>
             </div>
             <div class="md-footer__button md-icon">
