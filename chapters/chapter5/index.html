@@ -625,97 +625,108 @@
 <h2 id="lecture-3-bloch-sphere-eigenstates-eigenvectors-projection-operator">Lecture 3: Bloch Sphere, Eigenstates, Eigenvectors, Projection Operator</h2>
 <h3 id="key-algorithms">Key Algorithms</h3>
 <h2 id="superdense-coding-with-bell-states">Superdense Coding with Bell States</h2>
+<p>Key Insight
+Superdense coding demonstrates how entanglement + quantum operations + classical communication can double the classical communication capacity of a quantum channel. It is a powerful example of quantum advantage and plays a central role in quantum communication and information theory.</p>
 <p>In superdense coding, Alice and Bob share an entangled Bell state initially:</p>
+<p>Great! Here's the <strong>revised Markdown with LaTeX equations</strong> for your lecture section on <strong>superdense coding</strong>, using <strong>standard Dirac (ket) notation</strong> for all 4 Bell states, and fully compatible with VS Code PDF rendering:</p>
+<hr />
+<p>```markdown</p>
+<h1 id="superdense-coding">Superdense Coding</h1>
+<p>In <strong>superdense coding</strong>, Alice and Bob share an entangled qubit pair in the Bell state:</p>
 <div class="arithmatex">\[
-\left| \Phi^+ \right\rangle = \frac{1}{\sqrt{2}} \left( \left| 00 \right\rangle + \left| 11 \right\rangle \right)
+\left| \Phi^+ \right\rangle = \frac{1}{\sqrt{2}} \left( \left|00\right\rangle + \left|11\right\rangle \right)
 \]</div>
-<p>Alice encodes two classical bits of information (00, 01, 10, 11) by applying one of four quantum operations to her qubit:</p>
+<p>Alice can send <strong>two classical bits</strong> of information by applying one of four unitary operations to her qubit and then sending it to Bob. The shared entangled state allows Bob to recover two bits from just one qubit transmission.</p>
+<h2 id="bell-states">Bell States</h2>
+<p>The four Bell states used in superdense coding are:</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\left| \Phi^+ \right\rangle &amp;= \frac{1}{\sqrt{2}} \left( \left|00\right\rangle + \left|11\right\rangle \right) \\
+\left| \Phi^- \right\rangle &amp;= \frac{1}{\sqrt{2}} \left( \left|00\right\rangle - \left|11\right\rangle \right) \\
+\left| \Psi^+ \right\rangle &amp;= \frac{1}{\sqrt{2}} \left( \left|01\right\rangle + \left|10\right\rangle \right) \\
+\left| \Psi^- \right\rangle &amp;= \frac{1}{\sqrt{2}} \left( \left|01\right\rangle - \left|10\right\rangle \right)
+\end{aligned}
+\]</div>
+<h2 id="encoding-scheme">Encoding Scheme</h2>
+<p>Alice applies one of four operations to her qubit, depending on the 2-bit classical message she wants to send:</p>
 <table>
 <thead>
 <tr>
 <th>Classical Bits</th>
-<th>Operation Applied by Alice</th>
-<th>Resulting Bell State</th>
+<th>Operation (on Alice's qubit)</th>
+<th>Resulting State</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>00</td>
-<td>Identity (<span class="arithmatex">\(I\)</span>)</td>
+<td><span class="arithmatex">\(I\)</span> (Identity)</td>
 <td>$\left</td>
 </tr>
 <tr>
 <td>01</td>
-<td>Pauli-X (<span class="arithmatex">\(X\)</span>)</td>
+<td><span class="arithmatex">\(X\)</span> (Bit flip)</td>
 <td>$\left</td>
 </tr>
 <tr>
 <td>10</td>
-<td>Pauli-Z (<span class="arithmatex">\(Z\)</span>)</td>
+<td><span class="arithmatex">\(Z\)</span> (Phase flip)</td>
 <td>$\left</td>
 </tr>
 <tr>
 <td>11</td>
-<td>Pauli-Y (<span class="arithmatex">\(iY\)</span>)</td>
+<td><span class="arithmatex">\(iY\)</span> (Bit and phase flip)</td>
 <td>$\left</td>
 </tr>
 </tbody>
 </table>
-<h3 id="bell-states">Bell States</h3>
-<p>The four Bell states can be expressed as:</p>
-<div class="arithmatex">\[
-\left| \Phi^+ \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 0 \\ 0 \\ 1 \end{bmatrix}, \quad
-\left| \Phi^- \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 0 \\ 0 \\ -1 \end{bmatrix}
-\]</div>
-<div class="arithmatex">\[
-\left| \Psi^+ \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 0 \\ 1 \\ 1 \\ 0 \end{bmatrix}, \quad
-\left| \Psi^- \right\rangle = \frac{1}{\sqrt{2}} \begin{bmatrix} 0 \\ 1 \\ -1 \\ 0 \end{bmatrix}
-\]</div>
-<h3 id="alices-encoding">Alice's Encoding</h3>
+<p>The resulting state is then sent to Bob.</p>
+<h2 id="alices-encoding-operations-step-by-step">Alice's Encoding Operations (Step-by-Step)</h2>
 <ul>
 <li>
-<p>To encode <strong>00</strong>, Alice applies <span class="arithmatex">\(I\)</span>:
+<p><strong>Message 00</strong>:
   $$
   (I \otimes I) \left| \Phi^+ \right\rangle = \left| \Phi^+ \right\rangle
   $$</p>
 </li>
 <li>
-<p>To encode <strong>01</strong>, Alice applies <span class="arithmatex">\(X\)</span>:
+<p><strong>Message 01</strong>:
   $$
   (X \otimes I) \left| \Phi^+ \right\rangle = \left| \Psi^+ \right\rangle
   $$</p>
 </li>
 <li>
-<p>To encode <strong>10</strong>, Alice applies <span class="arithmatex">\(Z\)</span>:
+<p><strong>Message 10</strong>:
   $$
   (Z \otimes I) \left| \Phi^+ \right\rangle = \left| \Phi^- \right\rangle
   $$</p>
 </li>
 <li>
-<p>To encode <strong>11</strong>, Alice applies <span class="arithmatex">\(iY\)</span>:
+<p><strong>Message 11</strong>:
   $$
   (Y \otimes I) \left| \Phi^+ \right\rangle = i \left| \Psi^- \right\rangle
   $$</p>
 </li>
 </ul>
-<p>(Note: The global phase <span class="arithmatex">\(i\)</span> does not affect measurement outcomes.)</p>
-<h3 id="bobs-decoding">Bob’s Decoding</h3>
-<p>After Alice sends her qubit, Bob has the full two-qubit state. He performs the following steps:</p>
+<blockquote>
+<p>Note: The global phase <span class="arithmatex">\(i\)</span> does not affect measurement outcomes.</p>
+</blockquote>
+<h2 id="bobs-decoding-procedure">Bob’s Decoding Procedure</h2>
+<p>After receiving the qubit from Alice, Bob performs the <strong>reverse entanglement operations</strong> to recover the original 2 classical bits:</p>
 <ol>
-<li>Applies a <strong>CNOT</strong> gate (Alice’s qubit as control).</li>
-<li>Applies a <strong>Hadamard</strong> gate to Alice’s qubit.</li>
-<li>Measures both qubits in the computational basis.</li>
+<li>Apply <strong>CNOT</strong> gate with Alice's qubit as control and Bob's as target.</li>
+<li>Apply <strong>Hadamard gate</strong> to Alice’s qubit.</li>
 </ol>
-<p>This transforms each Bell state back to a basis state:</p>
+<p>This transforms each Bell state to a unique computational basis state:</p>
 <div class="arithmatex">\[
-\begin{align*}
-\left| \Phi^+ \right\rangle &amp;\rightarrow \left| 00 \right\rangle \\
-\left| \Psi^+ \right\rangle &amp;\rightarrow \left| 01 \right\rangle \\
-\left| \Phi^- \right\rangle &amp;\rightarrow \left| 10 \right\rangle \\
-\left| \Psi^- \right\rangle &amp;\rightarrow \left| 11 \right\rangle
-\end{align*}
+\begin{aligned}
+\left| \Phi^+ \right\rangle &amp;\rightarrow \left|00\right\rangle \\
+\left| \Psi^+ \right\rangle &amp;\rightarrow \left|01\right\rangle \\
+\left| \Phi^- \right\rangle &amp;\rightarrow \left|10\right\rangle \\
+\left| \Psi^- \right\rangle &amp;\rightarrow \left|11\right\rangle
+\end{aligned}
 \]</div>
-<p>Hence, Bob recovers the exact two-bit message sent by Alice.</p>
+<p>Bob then measures the two qubits in the computational basis and perfectly retrieves Alice’s 2-bit message.</p>
 
 
 
