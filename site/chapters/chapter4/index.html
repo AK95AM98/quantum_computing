@@ -18,7 +18,7 @@
         <link rel="prev" href="../chapter2/">
       
       
-        <link rel="next" href="../../prompts/">
+        <link rel="next" href="../chapter3/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -255,6 +255,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -323,6 +333,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tutorial - Unitary matrices and orthonormal basis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../chapter2/" class="md-nav__link">
         
   
@@ -363,6 +394,90 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3: Teleportation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5: Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 11: LatexA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter21/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 21: Try1
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -506,6 +621,113 @@
 
 
 <h1 id="chapter-4-new-quantum">Chapter 4: New Quantum</h1>
+<p>\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx}
+\usepackage{qcircuit}</p>
+<p>\title{Lecture 1: Fundamentals of Quantum States and Measurements}
+\date{February 24, 2025}</p>
+<p>\begin{document}
+\maketitle</p>
+<p>\section{Introduction}
+Quantum computing relies on quantum mechanics principles to manipulate information. This lecture introduces:
+\begin{itemize}
+    \item Basis and Orthonormal Basis
+    \item Bra-Ket Notation (Dirac Notation)
+    \item Quantum Measurement
+    \item Representing a state in different basis sets
+\end{itemize}</p>
+<p>\section{Basis and Orthonormal Basis}
+A basis is a set of vectors that spans a vector space. Any vector in that space can be expressed as a linear combination of basis vectors.
+For example, in <span class="arithmatex">\(\mathbb{R}^2\)</span>, the standard basis is:
+$$
+e_1 = \begin{bmatrix}1\0\end{bmatrix}, \quad e_2 = \begin{bmatrix}0\1\end{bmatrix}
+$$</p>
+<p>A vector <span class="arithmatex">\(v \in \mathbb{R}^2\)</span> can be written as:
+[
+    v = a e_1 + b e_2
+]
+A basis is orthonormal if:
+\begin{enumerate}
+    \item The basis vectors are orthogonal: <span class="arithmatex">\(\langle e_i | e_j \rangle = 0\)</span> for <span class="arithmatex">\(i \neq j\)</span>.
+    \item The basis vectors are normalized: <span class="arithmatex">\(\langle e_i | e_i \rangle = 1\)</span>.
+\end{enumerate}
+The computational basis for qubits is:
+[
+    |0\rangle = \begin{bmatrix}1\0\end{bmatrix}, \quad |1\rangle = \begin{bmatrix}0\1\end{bmatrix}
+]</p>
+<p>\section{Bra-Ket Notation (Dirac Notation)}
+\begin{itemize}
+    \item A ket <span class="arithmatex">\(|\psi\rangle\)</span> represents a column vector in Hilbert space.
+    \item A bra <span class="arithmatex">\(\langle \psi|\)</span> is the conjugate transpose (row vector).
+\end{itemize}
+Example:
+[
+    |\psi\rangle = \begin{bmatrix}a\b\end{bmatrix}, \quad \langle \psi| = \begin{bmatrix}a^<em> &amp; b^</em>\end{bmatrix}
+]
+Inner product:
+[
+    \langle \phi | \psi \rangle = \sum_i \phi^*_i \psi_i
+]
+Outer product:
+[
+    |\psi\rangle \langle \phi|
+]</p>
+<p>\section{Quantum Measurement}
+A qubit state can be written as:
+[
+    |\psi\rangle = \alpha |0\rangle + \beta |1\rangle
+]
+where <span class="arithmatex">\(\alpha, \beta\)</span> are complex numbers satisfying <span class="arithmatex">\(|\alpha|^2 + |\beta|^2 = 1\)</span>.
+When measured in the computational basis:
+\begin{itemize}
+    \item <span class="arithmatex">\(|0\rangle\)</span> occurs with probability <span class="arithmatex">\(|\alpha|^2\)</span>.
+    \item <span class="arithmatex">\(|1\rangle\)</span> occurs with probability <span class="arithmatex">\(|\beta|^2\)</span>.
+\end{itemize}
+Example:
+[
+    |\psi\rangle = \frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle
+]
+Measurement results in <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span> with equal probability.</p>
+<p>\section{Representing a State in Different Basis Sets}
+Besides the computational basis, we can use:
+\subsection{Hadamard Basis}
+[
+    |+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+]
+\subsection{Eigenbasis of Pauli-X}
+Eigenvectors:
+[
+    X = \begin{bmatrix} 0 &amp; 1 \ 1 &amp; 0 \end{bmatrix}
+]
+[
+    |+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+]</p>
+<p>\section{Python and Qiskit Implementation}
+\begin{verbatim}
+from qiskit import QuantumCircuit, Aer, execute
+from qiskit.visualization import plot_bloch_vector
+import numpy as np</p>
+<h1 id="define-a-quantum-circuit-with-one-qubit">Define a quantum circuit with one qubit</h1>
+<p>qc = QuantumCircuit(1)
+qc.h(0)  # Apply Hadamard gate
+qc.measure_all()</p>
+<h1 id="simulate">Simulate</h1>
+<p>simulator = Aer.get_backend('aer_simulator')
+result = execute(qc, simulator, shots=1000).result()
+counts = result.get_counts()
+print("Measurement Results:", counts)</p>
+<p>def plot_state():
+    plot_bloch_vector([1/np.sqrt(2), 0, 1/np.sqrt(2)])  # |+&gt; state
+plot_state()
+\end{verbatim}</p>
+<p>\section{Summary}
+\begin{itemize}
+    \item Basis and Orthonormal Basis: Computational and Hadamard basis.
+    \item Bra-Ket Notation: Representation of quantum states.
+    \item Measurement: Probabilistic collapse to basis states.
+    \item Different Basis Representations: Transforming states across different bases.
+\end{itemize}</p>
+<p>\end{document}</p>
 
 
 
@@ -558,13 +780,13 @@
         
         
           
-          <a href="../../prompts/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction">
+          <a href="../chapter3/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 3: Teleportation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Introduction
+                Chapter 3: Teleportation
               </div>
             </div>
             <div class="md-footer__button md-icon">

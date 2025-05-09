@@ -9,10 +9,17 @@ edit_uri: 'blob/master/docs'
 nav:
   - Home: index.md
   - Chapters:
-     - chapters\index.md
-     - Intro: chapters\chapter1.md
-     - chapters\chapter2.md
-     - chapters\chapter4.md
+     - chapters/index.md
+     - Intro: chapters/chapter1.md
+     - chapters/chapter10.md
+     - chapters/chapter2.md
+     - chapters/chapter3.md
+     - chapters/chapter4.md
+     - chapters/chapter5.md
+     - chapters/chapter6.md
+     - chapters/chapter7.md
+     - chapters/chapter11.md
+     - chapters/chapter21.md
   - Prompts:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
@@ -58,6 +65,8 @@ extra_css:
 extra_javascript:
     - js/extra.js
     - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+
 #extra:
 #  analytics:
 #    provider: google
