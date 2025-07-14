@@ -51,6 +51,8 @@
     
       <link rel="stylesheet" href="../../css/extra.css">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -247,6 +249,8 @@
       
         
           
+        
+      
         
       
         
@@ -529,6 +533,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter44.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -685,68 +710,68 @@ Quantum computing relies on quantum mechanics principles to manipulate informati
 <p>\section{Basis and Orthonormal Basis}
 A basis is a set of vectors that spans a vector space. Any vector in that space can be expressed as a linear combination of basis vectors.
 For example, in <span class="arithmatex">\(\mathbb{R}^2\)</span>, the standard basis is:
-$$
-e_1 = \begin{bmatrix}1\0\end{bmatrix}, \quad e_2 = \begin{bmatrix}0\1\end{bmatrix}
-$$</p>
+[
+e_1 = \begin{bmatrix}1 \ 0\end{bmatrix}, \quad e_2 = \begin{bmatrix}0 \ 1\end{bmatrix}
+]</p>
 <p>A vector <span class="arithmatex">\(v \in \mathbb{R}^2\)</span> can be written as:
 [
-    v = a e_1 + b e_2
-]
-A basis is orthonormal if:
+v = a e_1 + b e_2
+]</p>
+<p>A basis is orthonormal if:
 \begin{enumerate}
     \item The basis vectors are orthogonal: <span class="arithmatex">\(\langle e_i | e_j \rangle = 0\)</span> for <span class="arithmatex">\(i \neq j\)</span>.
     \item The basis vectors are normalized: <span class="arithmatex">\(\langle e_i | e_i \rangle = 1\)</span>.
-\end{enumerate}
-The computational basis for qubits is:
+\end{enumerate}</p>
+<p>The computational basis for qubits is:
 [
-    |0\rangle = \begin{bmatrix}1\0\end{bmatrix}, \quad |1\rangle = \begin{bmatrix}0\1\end{bmatrix}
+|0\rangle = \begin{bmatrix}1 \ 0\end{bmatrix}, \quad |1\rangle = \begin{bmatrix}0 \ 1\end{bmatrix}
 ]</p>
 <p>\section{Bra-Ket Notation (Dirac Notation)}
 \begin{itemize}
     \item A ket <span class="arithmatex">\(|\psi\rangle\)</span> represents a column vector in Hilbert space.
     \item A bra <span class="arithmatex">\(\langle \psi|\)</span> is the conjugate transpose (row vector).
-\end{itemize}
-Example:
+\end{itemize}</p>
+<p>Example:
 [
-    |\psi\rangle = \begin{bmatrix}a\b\end{bmatrix}, \quad \langle \psi| = \begin{bmatrix}a^<em> &amp; b^</em>\end{bmatrix}
-]
-Inner product:
+|\psi\rangle = \begin{bmatrix}a \ b\end{bmatrix}, \quad \langle \psi| = \begin{bmatrix}a^<em> &amp; b^</em>\end{bmatrix}
+]</p>
+<p>Inner product:
 [
-    \langle \phi | \psi \rangle = \sum_i \phi^*_i \psi_i
-]
-Outer product:
+\langle \phi | \psi \rangle = \sum_i \phi_i^* \psi_i
+]</p>
+<p>Outer product:
 [
-    |\psi\rangle \langle \phi|
+|\psi\rangle \langle \phi|
 ]</p>
 <p>\section{Quantum Measurement}
 A qubit state can be written as:
 [
-    |\psi\rangle = \alpha |0\rangle + \beta |1\rangle
+|\psi\rangle = \alpha |0\rangle + \beta |1\rangle
 ]
-where <span class="arithmatex">\(\alpha, \beta\)</span> are complex numbers satisfying <span class="arithmatex">\(|\alpha|^2 + |\beta|^2 = 1\)</span>.
-When measured in the computational basis:
+where <span class="arithmatex">\(\alpha, \beta\)</span> are complex numbers satisfying <span class="arithmatex">\(|\alpha|^2 + |\beta|^2 = 1\)</span>.</p>
+<p>When measured in the computational basis:
 \begin{itemize}
-    \item <span class="arithmatex">\(|0\rangle\)</span> occurs with probability <span class="arithmatex">\(|\alpha|^2\)</span>.
-    \item <span class="arithmatex">\(|1\rangle\)</span> occurs with probability <span class="arithmatex">\(|\beta|^2\)</span>.
-\end{itemize}
-Example:
+    \item <span class="arithmatex">\(|0\rangle\)</span> occurs with probability <span class="arithmatex">\(|\alpha|^2\)</span>
+    \item <span class="arithmatex">\(|1\rangle\)</span> occurs with probability <span class="arithmatex">\(|\beta|^2\)</span>
+\end{itemize}</p>
+<p>Example:
 [
-    |\psi\rangle = \frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle
-]
-Measurement results in <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span> with equal probability.</p>
+|\psi\rangle = \frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle
+]</p>
+<p>Measurement results in <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span> with equal probability.</p>
 <p>\section{Representing a State in Different Basis Sets}
-Besides the computational basis, we can use:
-\subsection{Hadamard Basis}
+Besides the computational basis, we can use:</p>
+<p>\subsection{Hadamard Basis}
 [
-    |+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
-]
-\subsection{Eigenbasis of Pauli-X}
+|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+]</p>
+<p>\subsection{Eigenbasis of Pauli-X}
 Eigenvectors:
 [
-    X = \begin{bmatrix} 0 &amp; 1 \ 1 &amp; 0 \end{bmatrix}
+X = \begin{bmatrix} 0 &amp; 1 \ 1 &amp; 0 \end{bmatrix}
 ]
 [
-    |+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
 ]</p>
 <p>\section{Python and Qiskit Implementation}
 \begin{verbatim}
@@ -768,10 +793,10 @@ plot_state()
 \end{verbatim}</p>
 <p>\section{Summary}
 \begin{itemize}
-    \item Basis and Orthonormal Basis: Computational and Hadamard basis.
-    \item Bra-Ket Notation: Representation of quantum states.
-    \item Measurement: Probabilistic collapse to basis states.
-    \item Different Basis Representations: Transforming states across different bases.
+    \item Basis and Orthonormal Basis: Computational and Hadamard basis
+    \item Bra-Ket Notation: Representation of quantum states
+    \item Measurement: Probabilistic collapse to basis states
+    \item Different Basis Representations: Transforming states across different bases
 \end{itemize}</p>
 <p>\end{document}</p>
 
@@ -874,6 +899,10 @@ plot_state()
         <script src="../../js/extra.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script>
       
     
   </body>
