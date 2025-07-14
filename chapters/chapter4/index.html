@@ -540,11 +540,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter44.md" class="md-nav__link">
+      <a href="../chapter8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Chapter 8: Quantum Fourier Transform
   </span>
   
 
@@ -692,113 +692,141 @@
 
 
 <h1 id="chapter-4-new-quantum">Chapter 4: New Quantum</h1>
-<p>\documentclass{article}
-\usepackage{amsmath, amssymb, graphicx}
-\usepackage{qcircuit}</p>
-<p>\title{Lecture 1: Fundamentals of Quantum States and Measurements}
-\date{February 24, 2025}</p>
-<p>\begin{document}
-\maketitle</p>
-<p>\section{Introduction}
-Quantum computing relies on quantum mechanics principles to manipulate information. This lecture introduces:
-\begin{itemize}
-    \item Basis and Orthonormal Basis
-    \item Bra-Ket Notation (Dirac Notation)
-    \item Quantum Measurement
-    \item Representing a state in different basis sets
-\end{itemize}</p>
-<p>\section{Basis and Orthonormal Basis}
-A basis is a set of vectors that spans a vector space. Any vector in that space can be expressed as a linear combination of basis vectors.
-For example, in <span class="arithmatex">\(\mathbb{R}^2\)</span>, the standard basis is:
-[
-e_1 = \begin{bmatrix}1 \ 0\end{bmatrix}, \quad e_2 = \begin{bmatrix}0 \ 1\end{bmatrix}
-]</p>
-<p>A vector <span class="arithmatex">\(v \in \mathbb{R}^2\)</span> can be written as:
-[
+<h1 id="lecture-1-fundamentals-of-quantum-states-and-measurements">Lecture 1: Fundamentals of Quantum States and Measurements</h1>
+<p><em>Date: February 24, 2025</em></p>
+<hr />
+<h2 id="introduction">Introduction</h2>
+<p>Quantum computing relies on quantum mechanics principles to manipulate information. This lecture introduces:</p>
+<ul>
+<li>Basis and Orthonormal Basis  </li>
+<li>Bra-Ket Notation (Dirac Notation)  </li>
+<li>Quantum Measurement  </li>
+<li>Representing a state in different basis sets</li>
+</ul>
+<hr />
+<h2 id="basis-and-orthonormal-basis">Basis and Orthonormal Basis</h2>
+<p>A basis is a set of vectors that spans a vector space. Any vector in that space can be expressed as a linear combination of basis vectors.</p>
+<p>Example in <span class="arithmatex">\(\mathbb{R}^2\)</span> (standard basis):</p>
+<div class="arithmatex">\[
+e_1 = \begin{bmatrix}1 \\ 0\end{bmatrix}, \quad e_2 = \begin{bmatrix}0 \\ 1\end{bmatrix}
+\]</div>
+<p>Any vector <span class="arithmatex">\(v \in \mathbb{R}^2\)</span> can be written as:</p>
+<div class="arithmatex">\[
 v = a e_1 + b e_2
-]</p>
-<p>A basis is orthonormal if:
-\begin{enumerate}
-    \item The basis vectors are orthogonal: <span class="arithmatex">\(\langle e_i | e_j \rangle = 0\)</span> for <span class="arithmatex">\(i \neq j\)</span>.
-    \item The basis vectors are normalized: <span class="arithmatex">\(\langle e_i | e_i \rangle = 1\)</span>.
-\end{enumerate}</p>
-<p>The computational basis for qubits is:
-[
-|0\rangle = \begin{bmatrix}1 \ 0\end{bmatrix}, \quad |1\rangle = \begin{bmatrix}0 \ 1\end{bmatrix}
-]</p>
-<p>\section{Bra-Ket Notation (Dirac Notation)}
-\begin{itemize}
-    \item A ket <span class="arithmatex">\(|\psi\rangle\)</span> represents a column vector in Hilbert space.
-    \item A bra <span class="arithmatex">\(\langle \psi|\)</span> is the conjugate transpose (row vector).
-\end{itemize}</p>
-<p>Example:
-[
-|\psi\rangle = \begin{bmatrix}a \ b\end{bmatrix}, \quad \langle \psi| = \begin{bmatrix}a^<em> &amp; b^</em>\end{bmatrix}
-]</p>
-<p>Inner product:
-[
+\]</div>
+<p>A basis is <strong>orthonormal</strong> if:</p>
+<ol>
+<li><span class="arithmatex">\(\langle e_i | e_j \rangle = 0\)</span> for <span class="arithmatex">\(i \ne j\)</span></li>
+<li><span class="arithmatex">\(\langle e_i | e_i \rangle = 1\)</span></li>
+</ol>
+<p><strong>Computational basis for qubits</strong>:</p>
+<div class="arithmatex">\[
+|0\rangle = \begin{bmatrix}1 \\ 0\end{bmatrix}, \quad |1\rangle = \begin{bmatrix}0 \\ 1\end{bmatrix}
+\]</div>
+<hr />
+<h2 id="bra-ket-notation-dirac-notation">Bra-Ket Notation (Dirac Notation)</h2>
+<ul>
+<li>A <strong>ket</strong> <span class="arithmatex">\(|\psi\rangle\)</span> is a column vector in Hilbert space  </li>
+<li>A <strong>bra</strong> <span class="arithmatex">\(\langle \psi|\)</span> is the conjugate transpose</li>
+</ul>
+<p>Example:</p>
+<div class="arithmatex">\[
+|\psi\rangle = \begin{bmatrix}a \\ b\end{bmatrix}, \quad
+\langle \psi| = \begin{bmatrix}a^* &amp; b^*\end{bmatrix}
+\]</div>
+<p><strong>Inner product</strong>:
+$$
 \langle \phi | \psi \rangle = \sum_i \phi_i^* \psi_i
-]</p>
-<p>Outer product:
-[
+$$</p>
+<p><strong>Outer product</strong>:
+$$
 |\psi\rangle \langle \phi|
-]</p>
-<p>\section{Quantum Measurement}
-A qubit state can be written as:
-[
+$$</p>
+<hr />
+<h2 id="quantum-measurement">Quantum Measurement</h2>
+<p>A qubit state can be written as:</p>
+<div class="arithmatex">\[
 |\psi\rangle = \alpha |0\rangle + \beta |1\rangle
-]
-where <span class="arithmatex">\(\alpha, \beta\)</span> are complex numbers satisfying <span class="arithmatex">\(|\alpha|^2 + |\beta|^2 = 1\)</span>.</p>
-<p>When measured in the computational basis:
-\begin{itemize}
-    \item <span class="arithmatex">\(|0\rangle\)</span> occurs with probability <span class="arithmatex">\(|\alpha|^2\)</span>
-    \item <span class="arithmatex">\(|1\rangle\)</span> occurs with probability <span class="arithmatex">\(|\beta|^2\)</span>
-\end{itemize}</p>
-<p>Example:
-[
+\]</div>
+<p>Where <span class="arithmatex">\(\alpha, \beta\)</span> are complex numbers and:</p>
+<div class="arithmatex">\[
+|\alpha|^2 + |\beta|^2 = 1
+\]</div>
+<p><strong>Measurement outcomes</strong>:</p>
+<ul>
+<li><span class="arithmatex">\(|0\rangle\)</span> occurs with probability <span class="arithmatex">\(|\alpha|^2\)</span>  </li>
+<li><span class="arithmatex">\(|1\rangle\)</span> occurs with probability <span class="arithmatex">\(|\beta|^2\)</span>  </li>
+</ul>
+<p>Example:</p>
+<div class="arithmatex">\[
 |\psi\rangle = \frac{1}{\sqrt{2}} |0\rangle + \frac{1}{\sqrt{2}} |1\rangle
-]</p>
-<p>Measurement results in <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span> with equal probability.</p>
-<p>\section{Representing a State in Different Basis Sets}
-Besides the computational basis, we can use:</p>
-<p>\subsection{Hadamard Basis}
-[
-|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
-]</p>
-<p>\subsection{Eigenbasis of Pauli-X}
-Eigenvectors:
-[
-X = \begin{bmatrix} 0 &amp; 1 \ 1 &amp; 0 \end{bmatrix}
-]
-[
-|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad |-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
-]</p>
-<p>\section{Python and Qiskit Implementation}
-\begin{verbatim}
-from qiskit import QuantumCircuit, Aer, execute
-from qiskit.visualization import plot_bloch_vector
-import numpy as np</p>
-<h1 id="define-a-quantum-circuit-with-one-qubit">Define a quantum circuit with one qubit</h1>
+\]</div>
+<p>This yields 50% probability of <span class="arithmatex">\(|0\rangle\)</span> or <span class="arithmatex">\(|1\rangle\)</span>.</p>
+<hr />
+<h2 id="representing-a-state-in-different-basis-sets">Representing a State in Different Basis Sets</h2>
+<h3 id="hadamard-basis">Hadamard Basis:</h3>
+<div class="arithmatex">\[
+|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad
+|-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+\]</div>
+<h3 id="eigenbasis-of-pauli-x">Eigenbasis of Pauli-X</h3>
+<div class="arithmatex">\[
+X = \begin{bmatrix}0 &amp; 1 \\ 1 &amp; 0\end{bmatrix}
+\]</div>
+<p>Eigenvectors:</p>
+<div class="arithmatex">\[
+|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}, \quad
+|-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}
+\]</div>
+<hr />
+<h2 id="python-and-qiskit-code">Python and Qiskit Code</h2>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">Aer</span><span class="p">,</span> <span class="n">execute</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.visualization</span><span class="w"> </span><span class="kn">import</span> <span class="n">plot_bloch_vector</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Define a quantum circuit with one qubit</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Apply Hadamard gate</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">measure_all</span><span class="p">()</span>
+
+<span class="c1"># Simulate the circuit</span>
+<span class="n">simulator</span> <span class="o">=</span> <span class="n">Aer</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;aer_simulator&#39;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">execute</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">simulator</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="n">counts</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Measurement Results:&quot;</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span>
+
+<span class="c1"># Plot the Bloch vector of |+&gt; state</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_state</span><span class="p">():</span>
+    <span class="n">plot_bloch_vector</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)])</span>
+
+<span class="n">plot_state</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="qiskit-example">Qiskit Example</h2>
+<p>```python
+from qiskit import QuantumCircuit</p>
 <p>qc = QuantumCircuit(1)
-qc.h(0)  # Apply Hadamard gate
-qc.measure_all()</p>
-<h1 id="simulate">Simulate</h1>
-<p>simulator = Aer.get_backend('aer_simulator')
-result = execute(qc, simulator, shots=1000).result()
-counts = result.get_counts()
-print("Measurement Results:", counts)</p>
-<p>def plot_state():
-    plot_bloch_vector([1/np.sqrt(2), 0, 1/np.sqrt(2)])  # |+&gt; state
-plot_state()
-\end{verbatim}</p>
-<p>\section{Summary}
-\begin{itemize}
-    \item Basis and Orthonormal Basis: Computational and Hadamard basis
-    \item Bra-Ket Notation: Representation of quantum states
-    \item Measurement: Probabilistic collapse to basis states
-    \item Different Basis Representations: Transforming states across different bases
-\end{itemize}</p>
-<p>\end{document}</p>
+qc.h(0)
+qc.measure_all()
+qc.draw()</p>
 
 
 
