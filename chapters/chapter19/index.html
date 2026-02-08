@@ -1110,6 +1110,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1730,6 +1741,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quiz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2260,6 +2282,118 @@ N_{\text{total}} = 9 \times 120 = 1{,}080 \text{ connected qubits}
 </table>
 <h2 id="summary">Summary</h2>
 <p>IBM's quantum roadmap is one of the most detailed and ambitious in the industry. The company is pursuing two parallel tracks: <strong>near-term quantum advantage</strong> through increasingly powerful Nighthawk-class processors, and <strong>long-term fault tolerance</strong> through the Loon → Kookaburra → Cockatoo → Starling pipeline. The key enabling technologies — qLDPC error correction codes, real-time decoding, c-couplers, l-couplers, and 300mm fabrication — are all progressing on or ahead of schedule. If IBM delivers on its targets, by 2029 we will have a quantum computer capable of running algorithms that are fundamentally beyond the reach of any classical supercomputer.</p>
+<h2 id="quiz">Quiz</h2>
+<p>Test your understanding of IBM's quantum computing roadmap, coupler technologies, and the path to fault tolerance.</p>
+<p><strong>1. How many qubits does the IBM Quantum Nighthawk processor have?</strong></p>
+<ul>
+<li>A) 127</li>
+<li>B) 133</li>
+<li>C) 120</li>
+<li>D) 156</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>C) 120 qubits</strong>, arranged in a square lattice topology with 218 next-generation tunable couplers.</p>
+</details>
+<p><strong>2. What is the target year for IBM to deliver its first large-scale, fault-tolerant quantum computer (Starling)?</strong></p>
+<ul>
+<li>A) 2026</li>
+<li>B) 2027</li>
+<li>C) 2028</li>
+<li>D) 2029</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>D) 2029</strong>. IBM Quantum Starling targets 200 logical qubits capable of running 100 million quantum gates.</p>
+</details>
+<p><strong>3. In the transmon qubit Hamiltonian <span class="arithmatex">\(\hat{H} = 4E_C(\hat{n} - n_g)^2 - E_J \cos\hat{\varphi}\)</span>, what condition defines the transmon regime?</strong></p>
+<ul>
+<li>A) <span class="arithmatex">\(E_J / E_C \ll 1\)</span></li>
+<li>B) <span class="arithmatex">\(E_J / E_C \approx 1\)</span></li>
+<li>C) <span class="arithmatex">\(E_J / E_C \gg 1\)</span></li>
+<li>D) <span class="arithmatex">\(E_J = 0\)</span></li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>C) <span class="arithmatex">\(E_J / E_C \gg 1\)</span></strong> (typically 50–100). This ratio exponentially suppresses charge noise sensitivity while preserving sufficient anharmonicity.</p>
+</details>
+<p><strong>4. What is the primary difference between c-couplers and l-couplers?</strong></p>
+<ul>
+<li>A) C-couplers are faster than l-couplers</li>
+<li>B) C-couplers connect distant qubits on the same chip; l-couplers connect qubits on separate chips</li>
+<li>C) L-couplers use optical fiber; c-couplers use copper wire</li>
+<li>D) They are the same technology with different names</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>B)</strong>. C-couplers use metal routing layers above the qubit plane for on-chip long-range connections, while l-couplers use superconducting coaxial cables (~1 meter) to link qubits on separate chips.</p>
+</details>
+<p><strong>5. What coupling mechanism do c-couplers use to enable interaction between distant qubits?</strong></p>
+<ul>
+<li>A) Direct capacitive coupling</li>
+<li>B) Inductive coupling through a shared inductor</li>
+<li>C) Virtual photon exchange through a resonator (dispersive regime)</li>
+<li>D) Optical photon transfer</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>C) Virtual photon exchange</strong>. In the dispersive regime, the resonator is adiabatically eliminated, yielding an effective coupling <span class="arithmatex">\(J_{\text{eff}} = \frac{g_A g_B}{2}\left(\frac{1}{\Delta_A} + \frac{1}{\Delta_B}\right)\)</span> without the resonator being physically populated.</p>
+</details>
+<p><strong>6. What special property of the l-coupler's "dark mode" makes it suitable for inter-chip quantum communication?</strong></p>
+<ul>
+<li>A) It oscillates at a higher frequency than the bright mode</li>
+<li>B) It has zero amplitude in the coaxial cable, making it immune to cable-induced decoherence</li>
+<li>C) It can carry multiple qubits simultaneously</li>
+<li>D) It operates at room temperature</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>B)</strong>. The dark mode <span class="arithmatex">\(\hat{d} = \frac{1}{\sqrt{2}}(\hat{r}_1 - \hat{r}_2)\)</span> has zero amplitude in the cable. Since the cable is the primary loss source, the dark mode is highly immune to decoherence.</p>
+</details>
+<p><strong>7. What is the approximate two-qubit gate error rate for inter-chip operations using l-couplers on IBM's Flamingo system?</strong></p>
+<ul>
+<li>A) <span class="arithmatex">\(8 \times 10^{-4}\)</span> (99.92% fidelity)</li>
+<li>B) <span class="arithmatex">\(3.5 \times 10^{-2}\)</span> (96.5% fidelity)</li>
+<li>C) <span class="arithmatex">\(5 \times 10^{-3}\)</span> (99.5% fidelity)</li>
+<li>D) <span class="arithmatex">\(1 \times 10^{-1}\)</span> (90% fidelity)</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>B) <span class="arithmatex">\(3.5 \times 10^{-2}\)</span></strong> (96.5% fidelity). This is about 40 times higher than on-chip gates (<span class="arithmatex">\(8 \times 10^{-4}\)</span>). Closing this gap is a major research focus.</p>
+</details>
+<p><strong>8. Which IBM processor is the first to incorporate qLDPC memory with a logical processing unit (LPU)?</strong></p>
+<ul>
+<li>A) Nighthawk</li>
+<li>B) Loon</li>
+<li>C) Kookaburra</li>
+<li>D) Cockatoo</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>C) Kookaburra</strong> (2026). It is the first processor module capable of storing information in qLDPC memory and processing it with an attached LPU.</p>
+</details>
+<p><strong>9. How does a tunable coupler achieve its "off" state (zero effective coupling between qubits)?</strong></p>
+<ul>
+<li>A) By physically disconnecting the qubits</li>
+<li>B) By cooling the coupler below the qubits' temperature</li>
+<li>C) By tuning the coupler frequency so that coupler-mediated coupling destructively interferes with direct capacitive coupling</li>
+<li>D) By applying a strong magnetic field to the qubits</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>C)</strong>. The effective coupling <span class="arithmatex">\(g_{\text{eff}} = g_{AB}^{\text{direct}} + \frac{g_{AC} g_{BC}}{\Delta_{AC}}\)</span> can be set to zero by tuning the coupler frequency <span class="arithmatex">\(\omega_C\)</span> via external magnetic flux through its SQUID loop, causing the two coupling paths to destructively interfere.</p>
+</details>
+<p><strong>10. IBM's [[144, 12, 12]] bivariate bicycle code encodes 12 logical qubits into 144 data qubits. Compared to surface codes, this represents approximately how much reduction in physical qubit overhead?</strong></p>
+<ul>
+<li>A) 2 times fewer qubits</li>
+<li>B) 5 times fewer qubits</li>
+<li>C) 10 times fewer qubits</li>
+<li>D) 100 times fewer qubits</li>
+</ul>
+<details class="answer">
+<summary>Answer</summary>
+<p><strong>C) 10 times fewer qubits</strong>. IBM's qLDPC bivariate bicycle codes achieve equivalent error correction to surface codes while requiring approximately 10 times fewer physical qubits.</p>
+</details>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.ibm.com/quantum/hardware">IBM Quantum Hardware and Roadmap</a></li>
