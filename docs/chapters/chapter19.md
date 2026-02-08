@@ -395,6 +395,110 @@ These manufacturing improvements are essential for the roadmap: building fault-t
 
 IBM's quantum roadmap is one of the most detailed and ambitious in the industry. The company is pursuing two parallel tracks: **near-term quantum advantage** through increasingly powerful Nighthawk-class processors, and **long-term fault tolerance** through the Loon → Kookaburra → Cockatoo → Starling pipeline. The key enabling technologies — qLDPC error correction codes, real-time decoding, c-couplers, l-couplers, and 300mm fabrication — are all progressing on or ahead of schedule. If IBM delivers on its targets, by 2029 we will have a quantum computer capable of running algorithms that are fundamentally beyond the reach of any classical supercomputer.
 
+## Quiz
+
+Test your understanding of IBM's quantum computing roadmap, coupler technologies, and the path to fault tolerance.
+
+**1. How many qubits does the IBM Quantum Nighthawk processor have?**
+
+- A) 127
+- B) 133
+- C) 120
+- D) 156
+
+??? answer "Answer"
+    **C) 120 qubits**, arranged in a square lattice topology with 218 next-generation tunable couplers.
+
+**2. What is the target year for IBM to deliver its first large-scale, fault-tolerant quantum computer (Starling)?**
+
+- A) 2026
+- B) 2027
+- C) 2028
+- D) 2029
+
+??? answer "Answer"
+    **D) 2029**. IBM Quantum Starling targets 200 logical qubits capable of running 100 million quantum gates.
+
+**3. In the transmon qubit Hamiltonian $\hat{H} = 4E_C(\hat{n} - n_g)^2 - E_J \cos\hat{\varphi}$, what condition defines the transmon regime?**
+
+- A) $E_J / E_C \ll 1$
+- B) $E_J / E_C \approx 1$
+- C) $E_J / E_C \gg 1$
+- D) $E_J = 0$
+
+??? answer "Answer"
+    **C) $E_J / E_C \gg 1$** (typically 50–100). This ratio exponentially suppresses charge noise sensitivity while preserving sufficient anharmonicity.
+
+**4. What is the primary difference between c-couplers and l-couplers?**
+
+- A) C-couplers are faster than l-couplers
+- B) C-couplers connect distant qubits on the same chip; l-couplers connect qubits on separate chips
+- C) L-couplers use optical fiber; c-couplers use copper wire
+- D) They are the same technology with different names
+
+??? answer "Answer"
+    **B)**. C-couplers use metal routing layers above the qubit plane for on-chip long-range connections, while l-couplers use superconducting coaxial cables (~1 meter) to link qubits on separate chips.
+
+**5. What coupling mechanism do c-couplers use to enable interaction between distant qubits?**
+
+- A) Direct capacitive coupling
+- B) Inductive coupling through a shared inductor
+- C) Virtual photon exchange through a resonator (dispersive regime)
+- D) Optical photon transfer
+
+??? answer "Answer"
+    **C) Virtual photon exchange**. In the dispersive regime, the resonator is adiabatically eliminated, yielding an effective coupling $J_{\text{eff}} = \frac{g_A g_B}{2}\left(\frac{1}{\Delta_A} + \frac{1}{\Delta_B}\right)$ without the resonator being physically populated.
+
+**6. What special property of the l-coupler's "dark mode" makes it suitable for inter-chip quantum communication?**
+
+- A) It oscillates at a higher frequency than the bright mode
+- B) It has zero amplitude in the coaxial cable, making it immune to cable-induced decoherence
+- C) It can carry multiple qubits simultaneously
+- D) It operates at room temperature
+
+??? answer "Answer"
+    **B)**. The dark mode $\hat{d} = \frac{1}{\sqrt{2}}(\hat{r}_1 - \hat{r}_2)$ has zero amplitude in the cable. Since the cable is the primary loss source, the dark mode is highly immune to decoherence.
+
+**7. What is the approximate two-qubit gate error rate for inter-chip operations using l-couplers on IBM's Flamingo system?**
+
+- A) $8 \times 10^{-4}$ (99.92% fidelity)
+- B) $3.5 \times 10^{-2}$ (96.5% fidelity)
+- C) $5 \times 10^{-3}$ (99.5% fidelity)
+- D) $1 \times 10^{-1}$ (90% fidelity)
+
+??? answer "Answer"
+    **B) $3.5 \times 10^{-2}$** (96.5% fidelity). This is about 40 times higher than on-chip gates ($8 \times 10^{-4}$). Closing this gap is a major research focus.
+
+**8. Which IBM processor is the first to incorporate qLDPC memory with a logical processing unit (LPU)?**
+
+- A) Nighthawk
+- B) Loon
+- C) Kookaburra
+- D) Cockatoo
+
+??? answer "Answer"
+    **C) Kookaburra** (2026). It is the first processor module capable of storing information in qLDPC memory and processing it with an attached LPU.
+
+**9. How does a tunable coupler achieve its "off" state (zero effective coupling between qubits)?**
+
+- A) By physically disconnecting the qubits
+- B) By cooling the coupler below the qubits' temperature
+- C) By tuning the coupler frequency so that coupler-mediated coupling destructively interferes with direct capacitive coupling
+- D) By applying a strong magnetic field to the qubits
+
+??? answer "Answer"
+    **C)**. The effective coupling $g_{\text{eff}} = g_{AB}^{\text{direct}} + \frac{g_{AC} g_{BC}}{\Delta_{AC}}$ can be set to zero by tuning the coupler frequency $\omega_C$ via external magnetic flux through its SQUID loop, causing the two coupling paths to destructively interfere.
+
+**10. IBM's [[144, 12, 12]] bivariate bicycle code encodes 12 logical qubits into 144 data qubits. Compared to surface codes, this represents approximately how much reduction in physical qubit overhead?**
+
+- A) 2 times fewer qubits
+- B) 5 times fewer qubits
+- C) 10 times fewer qubits
+- D) 100 times fewer qubits
+
+??? answer "Answer"
+    **C) 10 times fewer qubits**. IBM's qLDPC bivariate bicycle codes achieve equivalent error correction to surface codes while requiring approximately 10 times fewer physical qubits.
+
 ## References
 
 - [IBM Quantum Hardware and Roadmap](https://www.ibm.com/quantum/hardware)
