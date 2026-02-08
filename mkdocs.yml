@@ -19,6 +19,7 @@ nav:
      - chapters/chapter6.md
      - chapters/chapter7.md
      - chapters/chapter11.md
+     - IBM Quantum Roadmap: chapters/chapter19.md
      - chapters/chapter21.md
   - Prompts:
     - Introduction: prompts/index.md
