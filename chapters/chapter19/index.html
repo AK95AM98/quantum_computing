@@ -1,0 +1,2351 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Sharat B">
+      
+      
+        <link rel="canonical" href="https://ak95am98.github.io/quantum-computing/chapters/chapter19/">
+      
+      
+        <link rel="prev" href="../chapter11/">
+      
+      
+        <link rel="next" href="../chapter21/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>IBM Quantum Roadmap - quantum-computing</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-19-ibm-quantum-computing-roadmap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="quantum-computing" class="md-header__button md-logo" aria-label="quantum-computing" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            quantum-computing
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IBM Quantum Roadmap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ak95am98/quantum-computing" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="quantum-computing" class="md-nav__button md-logo" aria-label="quantum-computing" data-md-component="logo">
+      
+  <img src="../../img/logo.png" alt="logo">
+
+    </a>
+    quantum-computing
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ak95am98/quantum-computing" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapters
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Chapters
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial - Unitary matrices and orthonormal basis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2: Basis of quantum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3: Teleportation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4: New Quantum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5: Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6: D-Wave
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7: Ion-Q
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11: LatexA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM Quantum Roadmap
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IBM Quantum Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-hardware-20242025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Hardware (2024–2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nighthawk-processor-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Nighthawk Processor (2025)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Nighthawk Processor (2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nighthawk-scaling-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nighthawk Scaling Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loon-processor-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Loon Processor (2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coupler-technologies-c-couplers-and-l-couplers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coupler Technologies: C-Couplers and L-Couplers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coupler Technologies: C-Couplers and L-Couplers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-transmon-qubit-hamiltonian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background: Transmon Qubit Hamiltonian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest-neighbor-tunable-couplers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest-Neighbor Tunable Couplers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-couplers-long-range-on-chip-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C-Couplers: Long-Range On-Chip Connections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C-Couplers: Long-Range On-Chip Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coupling-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coupling Mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-c-couplers-matter-for-error-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why C-Couplers Matter for Error Correction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-couplers-inter-chip-quantum-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L-Couplers: Inter-Chip Quantum Links
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L-Couplers: Inter-Chip Quantum Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coupling-mechanism-dark-mode-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coupling Mechanism: Dark Mode Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-state-transfer-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantum State Transfer Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-chip-gate-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inter-Chip Gate Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-with-l-couplers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling with L-Couplers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-couplers-vs-l-couplers-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C-Couplers vs. L-Couplers: Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-to-quantum-advantage-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path to Quantum Advantage (2026)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Path to Quantum Advantage (2026)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kookaburra-processor-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kookaburra Processor (2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-advantage-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantum Advantage Tracker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-to-fault-tolerance-20272029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path to Fault Tolerance (2027–2029)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Path to Fault Tolerance (2027–2029)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cockatoo-processor-2027" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cockatoo Processor (2027)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starling-proof-of-concept-2028" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starling Proof-of-Concept (2028)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-quantum-starling-2029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Quantum Starling (2029)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-correction-breakthroughs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Correction Breakthroughs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Correction Breakthroughs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-qldpc-decoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time qLDPC Decoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bivariate-bicycle-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bivariate Bicycle Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-and-tools-qiskit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software and Tools: Qiskit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing-advances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing Advances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 21: Try1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../prompts/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prompts
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contact
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-hardware-20242025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Hardware (2024–2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-nighthawk-processor-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Nighthawk Processor (2025)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Nighthawk Processor (2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nighthawk-scaling-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nighthawk Scaling Targets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loon-processor-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Loon Processor (2025)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#coupler-technologies-c-couplers-and-l-couplers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coupler Technologies: C-Couplers and L-Couplers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Coupler Technologies: C-Couplers and L-Couplers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-transmon-qubit-hamiltonian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background: Transmon Qubit Hamiltonian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nearest-neighbor-tunable-couplers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nearest-Neighbor Tunable Couplers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-couplers-long-range-on-chip-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C-Couplers: Long-Range On-Chip Connections
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="C-Couplers: Long-Range On-Chip Connections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coupling-mechanism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coupling Mechanism
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-c-couplers-matter-for-error-correction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why C-Couplers Matter for Error Correction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-couplers-inter-chip-quantum-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L-Couplers: Inter-Chip Quantum Links
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="L-Couplers: Inter-Chip Quantum Links">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#physical-structure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physical Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coupling-mechanism-dark-mode-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coupling Mechanism: Dark Mode Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-state-transfer-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantum State Transfer Protocol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inter-chip-gate-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inter-Chip Gate Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling-with-l-couplers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling with L-Couplers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-couplers-vs-l-couplers-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C-Couplers vs. L-Couplers: Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-to-quantum-advantage-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path to Quantum Advantage (2026)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Path to Quantum Advantage (2026)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kookaburra-processor-2026" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kookaburra Processor (2026)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantum-advantage-tracker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantum Advantage Tracker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-to-fault-tolerance-20272029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Path to Fault Tolerance (2027–2029)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Path to Fault Tolerance (2027–2029)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cockatoo-processor-2027" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cockatoo Processor (2027)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starling-proof-of-concept-2028" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Starling Proof-of-Concept (2028)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ibm-quantum-starling-2029" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IBM Quantum Starling (2029)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-correction-breakthroughs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Correction Breakthroughs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Correction Breakthroughs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-qldpc-decoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-Time qLDPC Decoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bivariate-bicycle-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bivariate Bicycle Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-and-tools-qiskit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software and Tools: Qiskit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manufacturing-advances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Manufacturing Advances
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/ak95am98/quantum-computing/blob/master/docs/chapters/chapter19.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="chapter-19-ibm-quantum-computing-roadmap">Chapter 19: IBM Quantum Computing Roadmap</h1>
+<h2 id="overview">Overview</h2>
+<p>IBM has been one of the most transparent companies in the quantum computing industry when it comes to publishing detailed, multi-year roadmaps. Since unveiling its first quantum roadmap in 2020, IBM has consistently delivered on its milestones — from the 65-qubit Hummingbird to the 1,121-qubit Condor — while steadily refining its long-term vision. This chapter examines IBM's latest roadmap, covering the path from today's noisy intermediate-scale quantum (NISQ) processors to large-scale, fault-tolerant quantum computing by 2029.</p>
+<h2 id="current-hardware-20242025">Current Hardware (2024–2025)</h2>
+<p>IBM's current fleet of quantum computers includes processors from two major families:</p>
+<table>
+<thead>
+<tr>
+<th>Processor</th>
+<th>Qubits</th>
+<th>Generation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eagle</td>
+<td>127</td>
+<td>2021</td>
+</tr>
+<tr>
+<td>Heron r1</td>
+<td>133</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>Heron r2</td>
+<td>156</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>Heron r3</td>
+<td>156</td>
+<td>2024</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Heron</strong> family introduced tunable couplers — hardware elements that allow neighboring qubits to be selectively connected or isolated — significantly reducing crosstalk errors compared to the earlier Eagle processors.</p>
+<h2 id="the-nighthawk-processor-2025">The Nighthawk Processor (2025)</h2>
+<p>In November 2025, IBM announced <strong>IBM Quantum Nighthawk</strong>, its most advanced processor to date:</p>
+<ul>
+<li><strong>120 qubits</strong> arranged in a square lattice topology</li>
+<li><strong>218 next-generation tunable couplers</strong>, providing over 20% greater connectivity than Heron</li>
+<li>Enables circuits with <strong>30% more complexity</strong> while maintaining low error rates</li>
+<li>Supports workloads of up to <strong>5,000 two-qubit gates</strong></li>
+</ul>
+<p>Nighthawk represents a significant architectural shift. The square lattice layout with enhanced couplers enables roughly <strong>16 times the effective circuit depth</strong> compared to Heron, meaning algorithms can run substantially longer before errors accumulate to the point of rendering results meaningless.</p>
+<h3 id="nighthawk-scaling-targets">Nighthawk Scaling Targets</h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Two-Qubit Gate Target</th>
+<th>Qubit Scaling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td>5,000 gates</td>
+<td>120 qubits</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>7,500 gates</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2027</td>
+<td>10,000 gates</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2028</td>
+<td>15,000 gates</td>
+<td>1,000+ connected qubits via l-couplers</td>
+</tr>
+</tbody>
+</table>
+<p>By 2028, IBM plans to connect up to <strong>nine Nighthawk-class modules</strong> using long-range <strong>l-couplers</strong> (inter-chip links), scaling the system to over 1,000 interconnected qubits.</p>
+<h2 id="the-loon-processor-2025">The Loon Processor (2025)</h2>
+<p>Alongside Nighthawk, IBM unveiled <strong>IBM Quantum Loon</strong>, an experimental processor that demonstrates all the key hardware components required for fault-tolerant quantum computing:</p>
+<ul>
+<li><strong>Multiple high-quality, low-loss routing layers</strong> that provide pathways for longer on-chip connections called <strong>c-couplers</strong></li>
+<li><strong>C-couplers</strong> link distant qubits on the same chip, enabling the connectivity patterns required by advanced error-correcting codes</li>
+<li><strong>Mid-circuit qubit reset</strong> technologies that allow qubits to be reinitialized between computations — essential for error correction cycles</li>
+</ul>
+<p>Loon is not a production processor. Instead, it serves as a technology demonstrator, proving that IBM has the building blocks needed for the fault-tolerant systems on the roadmap.</p>
+<h2 id="coupler-technologies-c-couplers-and-l-couplers">Coupler Technologies: C-Couplers and L-Couplers</h2>
+<p>Two coupler technologies sit at the heart of IBM's scaling strategy: <strong>c-couplers</strong> for long-range on-chip connections and <strong>l-couplers</strong> for inter-chip connections. Understanding how they work requires a brief review of the physics of superconducting qubit coupling.</p>
+<h3 id="background-transmon-qubit-hamiltonian">Background: Transmon Qubit Hamiltonian</h3>
+<p>IBM's quantum processors are built from <strong>transmon qubits</strong> — superconducting circuits based on Josephson junctions. The Hamiltonian of a single transmon is:</p>
+<div class="arithmatex">\[
+\hat{H}_{\text{transmon}} = 4E_C(\hat{n} - n_g)^2 - E_J \cos\hat{\varphi}
+\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(E_C = \frac{e^2}{2C_\Sigma}\)</span> is the <strong>charging energy</strong>, with <span class="arithmatex">\(C_\Sigma\)</span> being the total capacitance of the qubit island</li>
+<li><span class="arithmatex">\(E_J\)</span> is the <strong>Josephson energy</strong>, set by the critical current of the junction</li>
+<li><span class="arithmatex">\(\hat{n}\)</span> is the Cooper pair number operator (counts pairs of electrons tunneling across the junction)</li>
+<li><span class="arithmatex">\(n_g\)</span> is the offset charge induced by the electrostatic environment</li>
+<li><span class="arithmatex">\(\hat{\varphi}\)</span> is the gauge-invariant superconducting phase difference across the junction</li>
+</ul>
+<p>In the transmon regime, <span class="arithmatex">\(E_J / E_C \gg 1\)</span> (typically 50–100), which exponentially suppresses charge noise sensitivity while preserving sufficient anharmonicity to address individual energy levels.</p>
+<h3 id="nearest-neighbor-tunable-couplers">Nearest-Neighbor Tunable Couplers</h3>
+<p>In IBM's Heron and Nighthawk processors, adjacent qubits are connected through <strong>tunable couplers</strong> — small auxiliary transmon circuits placed between each pair of neighboring qubits. The system Hamiltonian for two qubits <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> connected by a tunable coupler <span class="arithmatex">\(C\)</span> is:</p>
+<div class="arithmatex">\[
+\hat{H} = \hat{H}_A + \hat{H}_B + \hat{H}_C + \hat{H}_{\text{int}}
+\]</div>
+<p>The interaction term includes both direct capacitive coupling and coupler-mediated coupling:</p>
+<div class="arithmatex">\[
+\hat{H}_{\text{int}} = g_{AB}^{\text{direct}}(\hat{a}^\dagger \hat{b} + \hat{a}\hat{b}^\dagger) + g_{AC}(\hat{a}^\dagger \hat{c} + \hat{a}\hat{c}^\dagger) + g_{BC}(\hat{b}^\dagger \hat{c} + \hat{b}\hat{c}^\dagger)
+\]</div>
+<p>where <span class="arithmatex">\(\hat{a}^\dagger\)</span>, <span class="arithmatex">\(\hat{b}^\dagger\)</span>, <span class="arithmatex">\(\hat{c}^\dagger\)</span> are creation operators for qubits <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, and coupler <span class="arithmatex">\(C\)</span> respectively, and the <span class="arithmatex">\(g\)</span> values are capacitive coupling strengths given by:</p>
+<div class="arithmatex">\[
+g_{ij} = \frac{1}{2} \frac{C_{ij}}{\sqrt{C_{\Sigma,i}\, C_{\Sigma,j}}} \sqrt{\omega_i \omega_j}
+\]</div>
+<p>Here <span class="arithmatex">\(C_{ij}\)</span> is the mutual capacitance between elements <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>, <span class="arithmatex">\(C_{\Sigma,i}\)</span> is the total capacitance of element <span class="arithmatex">\(i\)</span>, and <span class="arithmatex">\(\omega_i\)</span> is its resonance frequency.</p>
+<p>The key physics is <strong>destructive interference</strong>: when the coupler frequency <span class="arithmatex">\(\omega_C\)</span> is tuned (via an external magnetic flux through the coupler's SQUID loop), the coupler-mediated interaction can partially or fully cancel the direct capacitive coupling. The effective qubit-qubit coupling becomes:</p>
+<div class="arithmatex">\[
+g_{\text{eff}} = g_{AB}^{\text{direct}} + \frac{g_{AC}\, g_{BC}}{\Delta_{AC}}
+\]</div>
+<p>where <span class="arithmatex">\(\Delta_{AC} = \omega_A - \omega_C\)</span> is the detuning between qubit <span class="arithmatex">\(A\)</span> and the coupler. By tuning <span class="arithmatex">\(\omega_C\)</span>, IBM can set <span class="arithmatex">\(g_{\text{eff}}\)</span> to zero (idle/off state) or to a desired value for performing two-qubit gates (on state). This tunability is what enables high-fidelity gates with low crosstalk.</p>
+<h3 id="c-couplers-long-range-on-chip-connections">C-Couplers: Long-Range On-Chip Connections</h3>
+<p>Standard tunable couplers only connect <strong>nearest-neighbor</strong> qubits on the chip. However, advanced error-correcting codes like the bivariate bicycle qLDPC codes require connectivity patterns where a qubit must interact with distant, non-adjacent qubits. This is where <strong>c-couplers</strong> come in.</p>
+<h4 id="physical-structure">Physical Structure</h4>
+<p>A c-coupler is implemented by adding one or more <strong>metal routing layers</strong> above the qubit plane on the chip. These additional superconducting metal planes act as bridges — they carry microwave signals over the top of intervening qubits to connect two distant qubits on the same chip.</p>
+<p>The physical structure can be modeled as a transmission line resonator of length <span class="arithmatex">\(\ell\)</span> connecting two distant qubits. The resonator has a fundamental frequency:</p>
+<div class="arithmatex">\[
+\omega_r = \frac{\pi v}{\ell}
+\]</div>
+<p>where <span class="arithmatex">\(v = \frac{1}{\sqrt{LC}}\)</span> is the phase velocity of the microwave signal in the superconducting transmission line, with <span class="arithmatex">\(L\)</span> and <span class="arithmatex">\(C\)</span> being the inductance and capacitance per unit length.</p>
+<h4 id="coupling-mechanism">Coupling Mechanism</h4>
+<p>Each qubit couples capacitively to one end of the c-coupler resonator. The resulting Hamiltonian follows the <strong>Jaynes-Cummings model</strong> for each qubit-resonator interaction:</p>
+<div class="arithmatex">\[
+\hat{H}_{\text{c-coupler}} = \omega_r \hat{r}^\dagger \hat{r} + \sum_{k \in \{A,B\}} \left[ \frac{\omega_k}{2} \hat{\sigma}_z^{(k)} + g_k \left( \hat{\sigma}_+^{(k)} \hat{r} + \hat{\sigma}_-^{(k)} \hat{r}^\dagger \right) \right]
+\]</div>
+<p>where <span class="arithmatex">\(\hat{r}^\dagger\)</span> and <span class="arithmatex">\(\hat{r}\)</span> are the creation and annihilation operators for the resonator mode, <span class="arithmatex">\(g_k\)</span> is the coupling strength of qubit <span class="arithmatex">\(k\)</span> to the resonator, and <span class="arithmatex">\(\hat{\sigma}_{\pm}^{(k)}\)</span> are the raising/lowering operators for qubit <span class="arithmatex">\(k\)</span>.</p>
+<p>In the <strong>dispersive regime</strong> (where the qubit-resonator detuning <span class="arithmatex">\(\Delta_k = \omega_k - \omega_r\)</span> is much larger than <span class="arithmatex">\(g_k\)</span>), the resonator can be adiabatically eliminated, yielding an effective qubit-qubit interaction:</p>
+<div class="arithmatex">\[
+\hat{H}_{\text{eff}} = J_{\text{eff}} \left( \hat{\sigma}_+^{(A)} \hat{\sigma}_-^{(B)} + \hat{\sigma}_-^{(A)} \hat{\sigma}_+^{(B)} \right)
+\]</div>
+<p>with the effective coupling strength:</p>
+<div class="arithmatex">\[
+J_{\text{eff}} = \frac{g_A \, g_B}{2} \left( \frac{1}{\Delta_A} + \frac{1}{\Delta_B} \right)
+\]</div>
+<p>This is a <strong>virtual photon exchange</strong> — the two qubits swap excitations through the resonator without the resonator ever being physically populated. The process is mediated by virtual photons, analogous to how the Coulomb force between charged particles is mediated by virtual photons in quantum electrodynamics.</p>
+<h4 id="performance">Performance</h4>
+<p>IBM has demonstrated c-coupler test chips achieving two-qubit error rates between distant qubits of:</p>
+<div class="arithmatex">\[
+\varepsilon_{\text{c-coupler}} \approx 2 \times 10^{-3} \text{ to } 5 \times 10^{-3}
+\]</div>
+<p>This is comparable to the error rates between nearest-neighbor qubits with standard tunable couplers — a remarkable achievement, since long-range connections typically suffer from higher loss and decoherence. The key to this performance is the use of high-quality, low-loss superconducting routing layers that minimize microwave photon loss.</p>
+<h4 id="why-c-couplers-matter-for-error-correction">Why C-Couplers Matter for Error Correction</h4>
+<p>Surface codes — the most commonly studied error-correcting codes — only require nearest-neighbor connectivity but have high overhead (many physical qubits per logical qubit). IBM's qLDPC bivariate bicycle codes are far more efficient but require specific long-range connectivity patterns. Consider the [[144, 12, 12]] code: each of the 144 data qubits must be connected to specific syndrome check qubits that may be located far away on the chip. Without c-couplers, implementing these codes would require routing through many SWAP gates, each adding errors:</p>
+<div class="arithmatex">\[
+\varepsilon_{\text{SWAP chain}} = 1 - (1 - \varepsilon_{\text{gate}})^{3d}
+\]</div>
+<p>where <span class="arithmatex">\(d\)</span> is the distance in the qubit lattice and the factor of 3 arises because each SWAP decomposes into three CNOT gates. For <span class="arithmatex">\(d = 6\)</span> hops and <span class="arithmatex">\(\varepsilon_{\text{gate}} = 10^{-3}\)</span>, this gives <span class="arithmatex">\(\varepsilon_{\text{SWAP chain}} \approx 1.8\%\)</span> — far worse than a direct c-coupler connection.</p>
+<h3 id="l-couplers-inter-chip-quantum-links">L-Couplers: Inter-Chip Quantum Links</h3>
+<p>While c-couplers connect distant qubits on the <strong>same</strong> chip, <strong>l-couplers</strong> connect qubits on <strong>separate</strong> chips. This is essential for scaling beyond the limits of a single monolithic processor.</p>
+<h4 id="physical-structure_1">Physical Structure</h4>
+<p>An l-coupler consists of a <strong>superconducting coaxial cable</strong> (approximately one meter in length) that connects dedicated communication resonators on two separate quantum chips. The entire assembly operates inside a <strong>dilution refrigerator</strong> at millikelvin temperatures (typically 10–20 mK), the same environment as the quantum processors themselves.</p>
+<p>The physical components are:</p>
+<ol>
+<li><strong>Communication resonator on Chip A</strong> — a superconducting microwave cavity coupled to one or more qubits</li>
+<li><strong>Superconducting coaxial cable</strong> — an aluminum coaxial line with mechanically-intermixed indium joins for low-loss connections</li>
+<li><strong>Communication resonator on Chip B</strong> — the matching cavity on the remote chip</li>
+</ol>
+<h4 id="coupling-mechanism-dark-mode-architecture">Coupling Mechanism: Dark Mode Architecture</h4>
+<p>The l-coupler exploits a phenomenon from coupled oscillator physics. When two resonators (one on each chip) are connected through the coaxial cable, the combined system supports multiple modes. The Hamiltonian of the coupled resonator system is:</p>
+<div class="arithmatex">\[
+\hat{H}_{\text{link}} = \omega_{r_1} \hat{r}_1^\dagger \hat{r}_1 + \omega_{r_2} \hat{r}_2^\dagger \hat{r}_2 + \omega_{\text{cable}} \hat{c}^\dagger \hat{c} + g_1(\hat{r}_1^\dagger \hat{c} + \hat{r}_1 \hat{c}^\dagger) + g_2(\hat{r}_2^\dagger \hat{c} + \hat{r}_2 \hat{c}^\dagger)
+\]</div>
+<p>where <span class="arithmatex">\(\hat{r}_1\)</span>, <span class="arithmatex">\(\hat{r}_2\)</span> are the operators for the two chip resonators, <span class="arithmatex">\(\hat{c}\)</span> is the cable mode operator, and <span class="arithmatex">\(g_1\)</span>, <span class="arithmatex">\(g_2\)</span> are the coupling strengths at each junction.</p>
+<p>When the two communication resonators are tuned to the same frequency (<span class="arithmatex">\(\omega_{r_1} = \omega_{r_2} = \omega_r\)</span>), the normal modes of the system include a <strong>dark mode</strong>:</p>
+<div class="arithmatex">\[
+\hat{d} = \frac{1}{\sqrt{2}}(\hat{r}_1 - \hat{r}_2)
+\]</div>
+<p>This dark mode has a remarkable property: it has <strong>zero amplitude in the coaxial cable</strong>. Because the cable is the primary source of photon loss in the link, the dark mode is highly immune to cable-induced decoherence. Quantum information encoded in the dark mode can be transferred between chips with significantly higher fidelity than would be possible using a simple resonant transfer through the cable.</p>
+<p>The effective inter-chip qubit-qubit coupling, after adiabatic elimination of the resonator modes, takes the form:</p>
+<div class="arithmatex">\[
+J_{\text{inter}} = \frac{g_{q_1} g_{q_2}}{2\Delta} \cdot \frac{g_1 g_2}{\delta^2 - g_{\text{eff}}^2}
+\]</div>
+<p>where <span class="arithmatex">\(g_{q_i}\)</span> are the qubit-to-resonator couplings, <span class="arithmatex">\(\Delta\)</span> is the qubit-resonator detuning, <span class="arithmatex">\(\delta\)</span> is the resonator-cable detuning, and <span class="arithmatex">\(g_{\text{eff}}\)</span> captures the hybridization between the resonators and the cable.</p>
+<h4 id="quantum-state-transfer-protocol">Quantum State Transfer Protocol</h4>
+<p>To transfer a quantum state <span class="arithmatex">\(|\psi\rangle = \alpha|0\rangle + \beta|1\rangle\)</span> from a qubit on Chip A to a qubit on Chip B, the l-coupler uses a sequence of calibrated microwave pulses:</p>
+<ol>
+<li><strong>Qubit A → Resonator A</strong>: A <span class="arithmatex">\(\pi\)</span>-pulse swaps the qubit state into the communication resonator on Chip A</li>
+<li><strong>Resonator A → Dark Mode → Resonator B</strong>: The state transfers through the dark mode of the coupled resonator-cable system, evolving under the link Hamiltonian for a time <span class="arithmatex">\(t_{\text{transfer}} = \frac{\pi}{2J_{\text{link}}}\)</span></li>
+<li><strong>Resonator B → Qubit B</strong>: A second <span class="arithmatex">\(\pi\)</span>-pulse maps the state onto the target qubit on Chip B</li>
+</ol>
+<p>The total transfer time is on the order of hundreds of nanoseconds, governed by the coupling strengths in the system.</p>
+<h4 id="inter-chip-gate-operations">Inter-Chip Gate Operations</h4>
+<p>Rather than transferring states, l-couplers can also implement <strong>direct inter-chip two-qubit gates</strong>. IBM's Flamingo architecture demonstrated inter-chip CNOT gates between Heron R2 chips connected by meter-long superconducting l-couplers. The l-coupler natively supports analog <strong>iSWAP-like interactions</strong>:</p>
+<div class="arithmatex">\[
+U_{\text{iSWAP}}(\theta) = \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cos\theta &amp; i\sin\theta &amp; 0 \\
+0 &amp; i\sin\theta &amp; \cos\theta &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<p>By calibrating the interaction time and applying single-qubit corrections, this can be compiled into standard gate sets including CNOT.</p>
+<h4 id="performance_1">Performance</h4>
+<p>Current l-coupler performance on IBM's Flamingo system:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>On-Chip (Heron R2)</th>
+<th>Inter-Chip (L-Coupler)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two-qubit gate error</td>
+<td><span class="arithmatex">\(8 \times 10^{-4}\)</span> (99.92% fidelity)</td>
+<td><span class="arithmatex">\(3.5 \times 10^{-2}\)</span> (96.5% fidelity)</td>
+</tr>
+<tr>
+<td>Connectivity</td>
+<td>Nearest-neighbor</td>
+<td>Chip-to-chip (~1 meter)</td>
+</tr>
+</tbody>
+</table>
+<p>The inter-chip error rate is currently about <strong>40 times higher</strong> than on-chip gates. Closing this gap is a major focus of IBM's research. Improvements in cable loss, junction quality, and pulse calibration are expected to bring inter-chip fidelity closer to on-chip levels by the time Cockatoo and Starling arrive.</p>
+<h4 id="scaling-with-l-couplers">Scaling with L-Couplers</h4>
+<p>IBM's modular scaling plan uses l-couplers to build systems far larger than any single chip:</p>
+<div class="arithmatex">\[
+N_{\text{total}} = n_{\text{modules}} \times N_{\text{qubits/module}} + N_{\text{link qubits}}
+\]</div>
+<p>For the 2028 target, nine Nighthawk-class modules connected via l-couplers yield:</p>
+<div class="arithmatex">\[
+N_{\text{total}} = 9 \times 120 = 1{,}080 \text{ connected qubits}
+\]</div>
+<p>Each module retains its high-fidelity on-chip gates for local computation, while l-couplers handle the less frequent but essential inter-module operations required by distributed error correction protocols.</p>
+<h3 id="c-couplers-vs-l-couplers-comparison">C-Couplers vs. L-Couplers: Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>C-Coupler</th>
+<th>L-Coupler</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scope</strong></td>
+<td>On-chip (same processor)</td>
+<td>Inter-chip (separate processors)</td>
+</tr>
+<tr>
+<td><strong>Physical medium</strong></td>
+<td>Metal routing layers above qubit plane</td>
+<td>Superconducting coaxial cable (~1 m)</td>
+</tr>
+<tr>
+<td><strong>Operating temperature</strong></td>
+<td>Millikelvin (on-chip)</td>
+<td>Millikelvin (in dilution refrigerator)</td>
+</tr>
+<tr>
+<td><strong>Two-qubit error rate</strong></td>
+<td><span class="arithmatex">\(2\text{–}5 \times 10^{-3}\)</span></td>
+<td><span class="arithmatex">\(\sim 3.5 \times 10^{-2}\)</span></td>
+</tr>
+<tr>
+<td><strong>Primary use</strong></td>
+<td>qLDPC code connectivity</td>
+<td>Modular scaling beyond single chip</td>
+</tr>
+<tr>
+<td><strong>Coupling mechanism</strong></td>
+<td>Virtual photon exchange via resonator</td>
+<td>Dark mode transfer via coaxial link</td>
+</tr>
+<tr>
+<td><strong>First demonstration</strong></td>
+<td>Loon (2025)</td>
+<td>Flamingo (2024)</td>
+</tr>
+<tr>
+<td><strong>Production deployment</strong></td>
+<td>Kookaburra (2026)</td>
+<td>Cockatoo (2027)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="path-to-quantum-advantage-2026">Path to Quantum Advantage (2026)</h2>
+<p>IBM defines <strong>quantum advantage</strong> as the point where a quantum computer can solve a computation more accurately, cheaply, or efficiently than any classical method. IBM expects the first verified cases of quantum advantage to be confirmed by the broader research community by the end of 2026.</p>
+<h3 id="kookaburra-processor-2026">Kookaburra Processor (2026)</h3>
+<p>The key hardware milestone for 2026 is <strong>IBM Quantum Kookaburra</strong>:</p>
+<ul>
+<li>First processor module capable of storing information in a <strong>quantum low-density parity check (qLDPC) memory</strong></li>
+<li>Includes an attached <strong>logical processing unit (LPU)</strong> for operating on the stored logical qubits</li>
+<li>Designed to work alongside classical high-performance computing (HPC) systems to deliver quantum advantage</li>
+</ul>
+<p>The qLDPC memory is a breakthrough in error correction efficiency. IBM's approach uses <strong>bivariate bicycle (BB) codes</strong>:</p>
+<div class="arithmatex">\[
+\text{[[144, 12, 12]] gross code:} \quad 144 \text{ data qubits} + 144 \text{ syndrome qubits} \rightarrow 12 \text{ logical qubits}
+\]</div>
+<p>This achieves equivalent error correction to surface codes while requiring approximately <strong>10 times fewer physical qubits</strong> — a dramatic improvement in overhead.</p>
+<h3 id="quantum-advantage-tracker">Quantum Advantage Tracker</h3>
+<p>IBM has introduced a community-led <strong>quantum advantage tracker</strong> that monitors three categories of experiments:</p>
+<ol>
+<li><strong>Observable estimation</strong> — computing expectation values of quantum observables</li>
+<li><strong>Variational problems</strong> — optimization and machine learning tasks using variational quantum algorithms</li>
+<li><strong>Efficiently verifiable problems</strong> — tasks where quantum results can be checked classically</li>
+</ol>
+<h2 id="path-to-fault-tolerance-20272029">Path to Fault Tolerance (2027–2029)</h2>
+<h3 id="cockatoo-processor-2027">Cockatoo Processor (2027)</h3>
+<p><strong>IBM Quantum Cockatoo</strong> is planned to demonstrate:</p>
+<ul>
+<li><strong>Entanglement between separate processor modules</strong> using universal adapters</li>
+<li>Inter-module quantum information transfer</li>
+<li>Multi-module error correction across physically separated chips</li>
+</ul>
+<p>This is a critical milestone: to build truly large-scale quantum computers, qubits on different chips must be entangled as reliably as qubits on the same chip.</p>
+<h3 id="starling-proof-of-concept-2028">Starling Proof-of-Concept (2028)</h3>
+<p>The 2028 milestone focuses on:</p>
+<ul>
+<li><strong>Magic state injection</strong> across multiple modules — a technique essential for performing universal quantum computation with error-corrected qubits</li>
+<li>Integration of <strong>error-correcting decoder hardware</strong> (FPGAs or ASICs)</li>
+</ul>
+<p>IBM's <strong>Relay-BP decoder</strong> achieves a 5–10 times reduction in decoding overhead compared to other leading approaches, and it is compact enough to run on standard FPGAs.</p>
+<h3 id="ibm-quantum-starling-2029">IBM Quantum Starling (2029)</h3>
+<p>The culmination of IBM's roadmap is <strong>IBM Quantum Starling</strong> — a large-scale, fault-tolerant quantum computer with the following targets:</p>
+<div class="arithmatex">\[
+\text{Starling:} \quad 200 \text{ logical qubits} \times 100{,}000{,}000 \text{ quantum gates}
+\]</div>
+<p>Key specifications:</p>
+<ul>
+<li><strong>200 logical qubits</strong> — each protected by layers of error correction</li>
+<li>Capable of running circuits with <strong>100 million quantum gates</strong></li>
+<li>Will be constructed at IBM's <strong>Poughkeepsie, New York</strong> facility</li>
+</ul>
+<p>To put this in perspective, today's best quantum processors can handle circuits of a few thousand gates before errors dominate. Starling aims for a 20,000-fold increase in circuit depth — enough to run algorithms like quantum phase estimation and quantum chemistry simulations that require deep circuits.</p>
+<h2 id="error-correction-breakthroughs">Error Correction Breakthroughs</h2>
+<p>A key enabler of the roadmap is IBM's progress in quantum error correction:</p>
+<h3 id="real-time-qldpc-decoding">Real-Time qLDPC Decoding</h3>
+<p>IBM demonstrated that classical hardware can accurately decode quantum errors in real time using qLDPC codes:</p>
+<ul>
+<li>Decoding latency: <strong>under 480 nanoseconds</strong></li>
+<li><strong>10 times faster</strong> than the previous leading approach</li>
+<li>Achieved <strong>one year ahead of schedule</strong></li>
+</ul>
+<p>Real-time decoding is critical because error correction must keep pace with the quantum processor's clock speed. If decoding is too slow, errors accumulate faster than they can be corrected.</p>
+<h3 id="bivariate-bicycle-codes">Bivariate Bicycle Codes</h3>
+<p>IBM's error correction strategy is built on bivariate bicycle codes:</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Data Qubits</th>
+<th>Logical Qubits</th>
+<th>Code Distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[[144, 12, 12]] gross</td>
+<td>144</td>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>[[288, 12, 18]] two-gross</td>
+<td>288</td>
+<td>12</td>
+<td>18</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>code distance</strong> <span class="arithmatex">\(d\)</span> determines how many physical errors can be tolerated before a logical error occurs. Higher distance means better protection at the cost of more physical qubits.</p>
+<h2 id="software-and-tools-qiskit">Software and Tools: Qiskit</h2>
+<p>IBM's open-source quantum SDK, <strong>Qiskit</strong>, continues to evolve alongside the hardware:</p>
+<ul>
+<li><strong>24% accuracy increase</strong> with dynamic circuits at 100+ qubit scale</li>
+<li><strong>100 times cost reduction</strong> for extracting accurate results via HPC-powered error mitigation</li>
+<li>New <strong>C++ interface</strong> for integration with classical HPC environments</li>
+<li>Planned <strong>computational libraries</strong> for machine learning and optimization by 2027</li>
+</ul>
+<p>Qiskit's transpiler automatically maps high-level quantum circuits onto the specific connectivity of IBM's processors, optimizing gate sequences and minimizing errors.</p>
+<h2 id="manufacturing-advances">Manufacturing Advances</h2>
+<p>IBM has made significant investments in quantum chip fabrication:</p>
+<ul>
+<li>Primary fabrication shifted to a <strong>300mm wafer facility</strong> at NY Creates' Albany NanoTech Complex</li>
+<li>Processor build time has been <strong>cut in half</strong> through semi-automated tooling</li>
+<li><strong>10-fold increase</strong> in quantum chip physical complexity</li>
+<li>Multiple processor designs can now be researched <strong>in parallel</strong></li>
+</ul>
+<p>These manufacturing improvements are essential for the roadmap: building fault-tolerant systems with thousands of qubits requires the same kind of scalable fabrication processes used in the classical semiconductor industry.</p>
+<h2 id="roadmap-summary">Roadmap Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Processor</th>
+<th>Key Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023</td>
+<td>Heron r1</td>
+<td>133-qubit tunable coupler processor</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>Heron r2/r3</td>
+<td>156-qubit improved fidelity</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>Nighthawk</td>
+<td>120 qubits, square lattice, 5,000 gates</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>Loon</td>
+<td>Fault-tolerance component demonstrator</td>
+</tr>
+<tr>
+<td>2026</td>
+<td>Kookaburra</td>
+<td>qLDPC memory + LPU, quantum advantage</td>
+</tr>
+<tr>
+<td>2027</td>
+<td>Cockatoo</td>
+<td>Multi-module entanglement</td>
+</tr>
+<tr>
+<td>2028</td>
+<td>Starling PoC</td>
+<td>Magic state injection, decoder hardware</td>
+</tr>
+<tr>
+<td>2029</td>
+<td>Starling</td>
+<td>200 logical qubits, 100M gates, fault-tolerant</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>IBM's quantum roadmap is one of the most detailed and ambitious in the industry. The company is pursuing two parallel tracks: <strong>near-term quantum advantage</strong> through increasingly powerful Nighthawk-class processors, and <strong>long-term fault tolerance</strong> through the Loon → Kookaburra → Cockatoo → Starling pipeline. The key enabling technologies — qLDPC error correction codes, real-time decoding, c-couplers, l-couplers, and 300mm fabrication — are all progressing on or ahead of schedule. If IBM delivers on its targets, by 2029 we will have a quantum computer capable of running algorithms that are fundamentally beyond the reach of any classical supercomputer.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.ibm.com/quantum/hardware">IBM Quantum Hardware and Roadmap</a></li>
+<li><a href="https://www.ibm.com/roadmaps/quantum/2025/">IBM Quantum Roadmap 2025</a></li>
+<li><a href="https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance">IBM Newsroom: New Quantum Processors, November 2025</a></li>
+<li><a href="https://www.ibm.com/quantum/blog/large-scale-ftqc">IBM Quantum Blog: Path to Large-Scale Fault-Tolerant QC</a></li>
+<li><a href="https://www.helpnetsecurity.com/2025/11/12/ibm-quantum-nighthawk-processor/">IBM Nighthawk Processor Coverage</a></li>
+<li><a href="https://www.ibm.com/quantum/blog/networked-quantum-computers">IBM Networked Quantum Computers Blog</a></li>
+<li><a href="https://arxiv.org/html/2505.09036v1">Hardware-Aware Compilation for Chip-to-Chip Coupler-Connected Modular Quantum Systems (arXiv)</a></li>
+<li><a href="https://qucat.org/tutorials/tuneable_coupler.html">Tunable Coupler Documentation — qucat</a></li>
+<li><a href="https://arxiv.org/html/2401.03817v2">Context-Aware Coupler Reconfiguration for Tunable Coupler-Based Superconducting Quantum Computers (arXiv)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../chapter11/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 11: LatexA">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 11: LatexA
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter21/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 21: Try1">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 21: Try1
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
