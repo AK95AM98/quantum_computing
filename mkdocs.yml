@@ -1,34 +1,38 @@
-site_name: quantum-computing
-site_description: 'DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_name: Introduction to Quantum Computing
+site_description: 'An introductory course on quantum computing covering qubits, gates, algorithms, error correction, and hardware platforms. All content licensed Creative Commons ShareAlike Attribution Noncommercial.'
 site_author: 'Sharat B'
 repo_name: 'GitHub Repo'
-site_url: 'https://ak95am98.github.io/quantum-computing/'
-repo_url: 'https://github.com/ak95am98/quantum-computing'
-edit_uri: 'blob/master/docs'
+site_url: 'https://AK95AM98.github.io/quantum_computing/'
+repo_url: 'https://github.com/AK95AM98/quantum_computing'
+edit_uri: 'blob/main/docs'
 
 nav:
   - Home: index.md
   - Chapters:
-     - chapters/index.md
-     - Intro: chapters/chapter1.md
-     - chapters/chapter10.md
-     - chapters/chapter2.md
-     - chapters/chapter3.md
-     - chapters/chapter4.md
-     - chapters/chapter5.md
-     - chapters/chapter6.md
-     - chapters/chapter7.md
-     - Ion-Q: chapters/chapter8.md
-     - chapters/chapter11.md
-     - IBM Quantum Roadmap: chapters/chapter19.md
-     - chapters/chapter21.md
+    - chapters/index.md
+    - Introduction: chapters/chapter1.md
+    - Basis of Quantum: chapters/chapter2.md
+    - Teleportation: chapters/chapter3.md
+    - New Quantum: chapters/chapter4.md
+    - Algorithms: chapters/chapter5.md
+    - D-Wave: chapters/chapter6.md
+    - Ion-Q: chapters/chapter7.md
+    - Ion-Q (contd): chapters/chapter8.md
+    - Unitary Matrices Tutorial: chapters/chapter10.md
+    - LaTeX: chapters/chapter11.md
+    - IBM Quantum Roadmap: chapters/chapter19.md
+    - Try1: chapters/chapter21.md
   - Prompts:
     - Introduction: prompts/index.md
     - Course Description: prompts/01-course-description.md
     - Enumeration: prompts/02-enumeration.md
-  - References: references.md
-  - Contact: contact.md
- 
+  - Learning Graph:
+    - Concept List: learning-graph/concept-list.md
+    - Course Description Assessment: learning-graph/course-description-assessment.md
+  - MicroSims:
+    - Graph Viewer: sims/graph-viewer/index.md
+  - Course Description: course-description.md
+
 # Dan's MicroSite Standards from here down
 
 theme:
@@ -68,10 +72,8 @@ extra_javascript:
     - js/extra.js
     - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
-
 #extra:
 #  analytics:
 #    provider: google
     # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
 #    property: G-XXXX
-
